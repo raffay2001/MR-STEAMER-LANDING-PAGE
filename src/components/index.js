@@ -1,1 +1,12 @@
-export { Header } from "./Header/Header";
+export { Header } from "./Header/Header.jsx";
+export { Hero } from "./Hero/Hero.jsx";
+export { Features } from "./Features/Features.jsx";
+export { Feature } from "./Feature/Feature.jsx";
+export { Services } from "./Services/Services.jsx";
+export { Service } from "./Service/Service.jsx";
+export { HireUs } from "./HireUs/HireUs.jsx";
+export { WhyUs } from "./WhyUs/WhyUs.jsx";
+export { BecomeMrSteamer } from "./BecomeMrSteamer/BecomeMrSteamer.jsx";
+export { BecomeMember } from "./BecomeMember/BecomeMember.jsx";
+export { SAR } from "./SAR/SAR.jsx";
+export { Footer } from "./Footer/Footer.jsx";
