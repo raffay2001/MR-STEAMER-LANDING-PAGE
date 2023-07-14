@@ -1,9 +1,11 @@
 import React from "react";
 import HomePage from "./pages/HomePage/HomePage";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <div className="w-screen flex flex-col justify-center">
+    <div className="flex flex-col justify-center">
+      <Toaster />
       <HomePage />
     </div>
   );

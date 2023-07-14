@@ -8,10 +8,10 @@ import InstagramLogo from "../../assets/images/instagram_logo.png";
 import FacebookLogo from "../../assets/images/facebook_logo.png";
 import LinkedInLogo from "../../assets/images/linkedin_logo.png";
 
-export const Footer = () => {
+export const Footer = ({setOpen}) => {
   return (
     <footer className="bg-black text-white px-12 mt-12 py-12">
-      <Grid container>
+      <Grid container spacing={4}>
         <Grid item xs={12} md={3}>
           <div className="flex flex-col gap-4">
             <div className="flex gap-3">
@@ -40,8 +40,8 @@ export const Footer = () => {
           </div>
         </Grid>
         <Grid item xs={12} md={6}>
-          <div className="flex gap-6">
-            <button className="border-none w-[200px] h-[60px] p-2 rounded-lg bg-white text-[16px] cursor-pointer hover:opacity-[0.9] flex justify-center items-center gap-3">
+          <div className="flex gap-6 flex-col md:flex-row">
+            <button className="border-none md:w-[200px] md:h-[60px] p-2 rounded-lg bg-white text-[16px] cursor-pointer hover:opacity-[0.9] flex justify-center items-center gap-3" onClick={() => setOpen(true)}>
               <img
                 src={googlePlayLogo}
                 alt="google_logo"
@@ -52,7 +52,7 @@ export const Footer = () => {
                 <span className="font-bold">Google Play</span>
               </p>
             </button>
-            <button className="border-none w-[200px] h-[60px] p-2 rounded-lg bg-white text-[16px] cursor-pointer hover:opacity-[0.9] flex justify-center items-center gap-2">
+            <button className="border-none md:w-[200px] md:h-[60px] p-2 rounded-lg bg-white text-[16px] cursor-pointer hover:opacity-[0.9] flex justify-center items-center gap-2" onClick={() => setOpen(true)}>
               <img
                 src={appleLogo}
                 alt="apple_logo"
@@ -66,8 +66,8 @@ export const Footer = () => {
           </div>
         </Grid>
         <Grid item xs={12} md={3}>
-          <div className="flex flex-col justify-between h-full">
-            <div className="flex justify-evenly">
+          <div className="mt-8 md:mt-0 flex flex-col justify-between h-full gap-6 md:gap-0">
+            <div className="flex justify-start md:justify-evenly gap-12 md:gap-0">
               <div className="flex flex-col gap-2">
                 <ul className="list-none flex flex-col gap-8">
                   <li className="hover:opacity-[0.9]">
@@ -102,7 +102,7 @@ export const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-start md:justify-center gap-4">
               <span className="text-[#ffffff80]">Follow Us</span>
               <img src={InstagramLogo} alt="instagram_logo" className="w-7" />
               <img src={FacebookLogo} alt="facebook_logo" className="w-7" />

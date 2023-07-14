@@ -5,15 +5,15 @@ import BecomeMrSteamerImg from "../../assets/images/BecomeMrSteamer.png";
 export const BecomeMrSteamer = () => {
   return (
     <section id="contact">
-      <div className="px-12 pt-32 pb-8">
-        <Grid container>
+      <div className="px-6 md:px-12 pt-12 md:pt-28 pb-8">
+        <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
-            <h1 style={{ fontWeight: 600, marginBottom: "3rem" }}>
+            <h1 style={{ fontWeight: 600 }} className="mb-[1rem] md:mb-[3rem]">
               Become Mr. Steamer
             </h1>
-            <div className="bg-[#F1F1F1] w-[436px] flex gap-2 px-8 py-4 rounded-md">
+            <div className="bg-[#F1F1F1] md:w-[436px] flex gap-1 px-1 md:px-8 py-4 rounded-md">
               <button
-                className="border-none flex flex-col p-2 text-[#666] cursor-pointer"
+                className="border-none flex flex-col p-2 text-[#666] cursor-pointer justify-center items-center"
                 style={{
                   borderRadius: "10px",
                   background: "white",
@@ -23,7 +23,7 @@ export const BecomeMrSteamer = () => {
                 <span style={{ fontWeight: 600 }}>Corporate Sector</span>
               </button>
               <button
-                className="border-none flex flex-col p-2 text-[#666] cursor-pointer"
+                className="border-none flex flex-col p-2 text-[#666] cursor-pointer justify-center items-center"
                 style={{
                   borderRadius: "10px",
                   background: "white",
@@ -33,7 +33,7 @@ export const BecomeMrSteamer = () => {
                 <span style={{ fontWeight: 600 }}>Corporate Sector</span>
               </button>
               <button
-                className="border-none flex flex-col p-2 text-white cursor-pointer"
+                className="border-none flex flex-col p-2 text-white cursor-pointer justify-center items-center"
                 style={{
                   borderRadius: "10px",
                   background: "linear-gradient(131deg, #000 0%, #2C4694 100%)",
@@ -43,7 +43,7 @@ export const BecomeMrSteamer = () => {
                 <span style={{ fontWeight: 600 }}>Individual Customer</span>
               </button>
             </div>
-            <div className="bg-[#F1F1F1] w-[300px] flex flex-col gap-5 px-8 py-4 mt-8 rounded-md">
+            <div className="bg-[#F1F1F1] md:w-[300px] flex flex-col gap-5 px-8 py-4 mt-8 rounded-md">
               <p style={{ fontWeight: 600, fontSize: 18 }}>
                 Registration with us
               </p>
@@ -112,7 +112,7 @@ export const BecomeMrSteamer = () => {
               <img
                 src={BecomeMrSteamerImg}
                 alt="BecomeMrSteamerImage"
-                style={{ width: "500px" }}
+                className="w-full md:w-[500px]"
               />
             </div>
           </Grid>

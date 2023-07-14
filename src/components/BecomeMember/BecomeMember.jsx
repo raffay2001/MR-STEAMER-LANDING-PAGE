@@ -5,9 +5,9 @@ import { SAR } from "../SAR/SAR";
 
 export const BecomeMember = () => {
   return (
-    <div className="px-12 pt-32 pb-8">
+    <div className="px-6 md:px-12 pt-16 md:pt-24 pb-8">
       <p>Choose Plan</p>
-      <h1 style={{ fontWeight: 600, marginBottom: "3rem" }}>Become Member</h1>
+      <h1 style={{ fontWeight: 600, marginBottom: "2rem" }}>Become Member</h1>
       <Grid container spacing={4}>
         {SARS.map((sar) => (
           <Grid key={sar.title} item xs={12} md={4}>

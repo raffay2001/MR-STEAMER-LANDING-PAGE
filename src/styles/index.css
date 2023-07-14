@@ -8,10 +8,28 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 html {
   scroll-behavior: smooth;
+}
+
+.test-border {
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.mobile-menu-enter {
+  transform: translateX(-100%);
+}
+
+.mobile-menu-enter-active {
+  transform: translateX(0%);
+  transition: transform 300ms ease-in-out;
+}
+
+.mobile-menu-exit {
+  transform: translateX(0%);
+}
+
+.mobile-menu-exit-active {
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
 }

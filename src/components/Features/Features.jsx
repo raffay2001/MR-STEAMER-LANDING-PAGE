@@ -6,7 +6,7 @@ import featuresImage from "../../assets/images/features.png";
 
 export const Features = () => {
   return (
-    <div className="px-12 pt-8 mb-24">
+    <div className="px-6 md:px-12 pt-16 md:pt-24 mb-24">
       <h1 className="mb-12">Our Features</h1>
       <Grid container>
         <Grid item xs={12} md={3}>
