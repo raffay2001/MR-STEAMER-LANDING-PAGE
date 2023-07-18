@@ -11,6 +11,7 @@ import { IconButton } from "@mui/material";
 
 export const Header = (props) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [navOption, setNavOption] = useState("home");
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -37,7 +38,8 @@ export const Header = (props) => {
     };
   }, []);
 
-  const handleSectionClick = (event) => {
+  const handleSectionClick = (event, navOption) => {
+    setNavOption(navOption);
     event.preventDefault();
     const targetId = event.target.getAttribute("href").substring(1);
     const targetElement = document.getElementById(targetId);
@@ -73,41 +75,81 @@ export const Header = (props) => {
         <nav className="flex flex-col gap-2 cursor-pointer">
           <div className="flex gap-8">
             <ul className="list-none flex gap-6">
-              <li className="border border-solid border-white rounded-3xl px-6 py-1 hover:opacity-[0.9]">
-                <a className="no-underline text-white" href="#home" onClick={handleSectionClick}>
+              <li
+                className={`hover:opacity-[0.9] ${
+                  navOption === "home"
+                    ? "border border-solid border-white rounded-3xl px-6 py-1"
+                    : ""
+                }`}
+              >
+                <a
+                  className="no-underline text-white"
+                  href="#home"
+                  onClick={(e) => handleSectionClick(e, "home")}
+                >
                   Home
                 </a>
               </li>
-              <li className="py-1 hover:opacity-[0.9]">
-                <a className="no-underline text-white" href="#services" onClick={handleSectionClick}>
+              <li
+                className={`py-1 hover:opacity-[0.9] ${
+                  navOption === "services"
+                    ? "border border-solid border-white rounded-3xl px-6 py-1"
+                    : ""
+                }`}
+              >
+                <a
+                  className="no-underline text-white"
+                  href="#services"
+                  onClick={(e) => handleSectionClick(e, "services")}
+                >
                   Services
                 </a>
               </li>
               <li className="py-1 hover:opacity-[0.9]">
-                <a className="no-underline text-white" href="#about" onClick={handleSectionClick}>
+                <a
+                  className="no-underline text-white"
+                  href="#about"
+                  onClick={handleSectionClick}
+                >
                   About Us
                 </a>
               </li>
               <li className="py-1 hover:opacity-[0.9]">
-                <a className="no-underline text-white" href="#contact" onClick={handleSectionClick}>
+                <a
+                  className="no-underline text-white"
+                  href="#contact"
+                  onClick={handleSectionClick}
+                >
                   Contact Us
                 </a>
               </li>
               <li className="py-1 hover:opacity-[0.9]">
-                <a className="no-underline text-white" href="#hire-us" onClick={handleSectionClick}>
+                <a
+                  className="no-underline text-white"
+                  href="#hire-us"
+                  onClick={handleSectionClick}
+                >
                   Hire Us
                 </a>
               </li>
             </ul>
             <div className="flex gap-4 text-[#ffffff80]">
               <div className="py-1 hover:opacity-[0.9]">
-                <a className="no-underline text-[#ffffff80]" href="#login" onClick={handleSectionClick}>
+                <a
+                  className="no-underline text-[#ffffff80]"
+                  href="#login"
+                  onClick={handleSectionClick}
+                >
                   Login
                 </a>
               </div>
               <div className="w-[0.1px] bg-gray-500"></div>
               <div className="py-1 hover:opacity-[0.9]">
-                <a className="no-underline text-[#ffffff80]" href="#signup" onClick={handleSectionClick}>
+                <a
+                  className="no-underline text-[#ffffff80]"
+                  href="#signup"
+                  onClick={handleSectionClick}
+                >
                   Signup
                 </a>
               </div>
