@@ -145,11 +145,6 @@ export const Hero = ({ setOpen }) => {
   return (
     <section id="home">
       <div className="pt-8 md:pt-12 px-6 md:px-12">
-        {/* <Carousel showArrows={false} showStatus={false}>
-          <HeroSlide slideNo={1} setOpen={setOpen} />
-          <HeroSlide slideNo={2} setOpen={setOpen} />
-        </Carousel> */}
-        {/* <HeroSlide slideNo={1} setOpen={setOpen} /> */}
         <CarouselX setOpen={setOpen} />
       </div>
     </section>

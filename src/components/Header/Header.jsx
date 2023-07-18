@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../../assets/images/logo.png";
 import Logo1 from "../../assets/images/logo1.png";
-import InstagramLogo from "../../assets/images/instagram_logo.png";
-import FacebookLogo from "../../assets/images/facebook_logo.png";
-import LinkedInLogo from "../../assets/images/linkedin_logo.png";
 import { CSSTransition } from "react-transition-group";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -44,7 +41,7 @@ export const Header = (props) => {
     const targetId = event.target.getAttribute("href").substring(1);
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      const headerOffset = isScrolled ? 70 : 0; // Adjust the offset based on the height of your fixed header
+      const headerOffset = navOption === "services" ? 220 : 150;
       const targetOffset = targetElement.offsetTop - headerOffset;
       window.scrollTo({ top: targetOffset, behavior: "smooth" });
     }
@@ -53,6 +50,7 @@ export const Header = (props) => {
 
   return (
     <>
+      {/* Desktop Header  */}
       <header
         className={`hidden bg-black md:flex justify-between z-50 items-center text-white px-12 pt-6 pb-2 ${
           isScrolled ? "fixed top-0 left-0 right-0" : ""
@@ -76,9 +74,9 @@ export const Header = (props) => {
           <div className="flex gap-8">
             <ul className="list-none flex gap-6">
               <li
-                className={`hover:opacity-[0.9] ${
+                className={`px-2 py-1 hover:opacity-[0.9] ${
                   navOption === "home"
-                    ? "border border-solid border-white rounded-3xl px-6 py-1"
+                    ? "border border-solid border-white rounded-3xl"
                     : ""
                 }`}
               >
@@ -91,9 +89,9 @@ export const Header = (props) => {
                 </a>
               </li>
               <li
-                className={`py-1 hover:opacity-[0.9] ${
+                className={`px-2 py-1 hover:opacity-[0.9] ${
                   navOption === "services"
-                    ? "border border-solid border-white rounded-3xl px-6 py-1"
+                    ? "border border-solid border-white rounded-3xl"
                     : ""
                 }`}
               >
@@ -105,29 +103,47 @@ export const Header = (props) => {
                   Services
                 </a>
               </li>
-              <li className="py-1 hover:opacity-[0.9]">
+              <li
+                className={`px-2 py-1 hover:opacity-[0.9] ${
+                  navOption === "about"
+                    ? "border border-solid border-white rounded-3xl"
+                    : ""
+                }`}
+              >
                 <a
                   className="no-underline text-white"
                   href="#about"
-                  onClick={handleSectionClick}
+                  onClick={(e) => handleSectionClick(e, "about")}
                 >
-                  About Us
+                  About
                 </a>
               </li>
-              <li className="py-1 hover:opacity-[0.9]">
+              <li
+                className={`px-2 py-1 hover:opacity-[0.9] ${
+                  navOption === "contact"
+                    ? "border border-solid border-white rounded-3xl"
+                    : ""
+                }`}
+              >
                 <a
                   className="no-underline text-white"
                   href="#contact"
-                  onClick={handleSectionClick}
+                  onClick={(e) => handleSectionClick(e, "contact")}
                 >
                   Contact Us
                 </a>
               </li>
-              <li className="py-1 hover:opacity-[0.9]">
+              <li
+                className={`px-2 py-1 hover:opacity-[0.9] ${
+                  navOption === "hireUs"
+                    ? "border border-solid border-white rounded-3xl"
+                    : ""
+                }`}
+              >
                 <a
                   className="no-underline text-white"
                   href="#hire-us"
-                  onClick={handleSectionClick}
+                  onClick={(e) => handleSectionClick(e, "hireUs")}
                 >
                   Hire Us
                 </a>
@@ -155,15 +171,10 @@ export const Header = (props) => {
               </div>
             </div>
           </div>
-          {/* <div className="flex items-center justify-end gap-4">
-          <span className="text-[#ffffff80]">Follow Us</span>
-          <img src={InstagramLogo} alt="instagram_logo" className="w-7" />
-          <img src={FacebookLogo} alt="facebook_logo" className="w-7" />
-          <img src={LinkedInLogo} alt="linkedin_logo" className="w-7" />
-        </div> */}
         </nav>
       </header>
 
+      {/* Mobile Header  */}
       <header
         className={`md:hidden bg-black flex justify-center z-50 items-center text-white px-6 py-4 ${
           isScrolled ? "fixed top-0 left-0 right-0" : "relative"
@@ -202,51 +213,79 @@ export const Header = (props) => {
             <div className="w-full h-full flex flex-col justify-center items-center gap-2">
               <div className="flex flex-col gap-12">
                 <a
-                  className="no-underline text-white border border-solid border-white rounded-3xl px-6 py-1"
+                  className={`no-underline text-white text-center px-6 py-1 ${
+                    navOption === "home"
+                      ? "border border-solid border-white rounded-3xl"
+                      : ""
+                  }`}
                   href="#home"
-                  onClick={handleSectionClick}
+                  onClick={(e) => handleSectionClick(e, "home")}
                 >
                   Home
                 </a>
                 <a
-                  className="no-underline text-white text-center"
+                  className={`no-underline text-white text-center px-6 py-1 ${
+                    navOption === "services"
+                      ? "border border-solid border-white rounded-3xl"
+                      : ""
+                  }`}
                   href="#services"
-                  onClick={handleSectionClick}
+                  onClick={(e) => handleSectionClick(e, "services")}
                 >
                   Services
                 </a>
                 <a
-                  className="no-underline text-white text-center"
+                  className={`no-underline text-white text-center px-6 py-1 ${
+                    navOption === "about"
+                      ? "border border-solid border-white rounded-3xl"
+                      : ""
+                  }`}
                   href="#about"
-                  onClick={handleSectionClick}
+                  onClick={(e) => handleSectionClick(e, "about")}
                 >
                   About Us
                 </a>
                 <a
-                  className="no-underline text-white text-center"
+                  className={`no-underline text-white text-center px-6 py-1 ${
+                    navOption === "contact"
+                      ? "border border-solid border-white rounded-3xl"
+                      : ""
+                  }`}
                   href="#contact"
-                  onClick={handleSectionClick}
+                  onClick={(e) => handleSectionClick(e, "contact")}
                 >
                   Contact Us
                 </a>
                 <a
-                  className="no-underline text-white text-center"
+                  className={`no-underline text-white text-center px-6 py-1 ${
+                    navOption === "hireUs"
+                      ? "border border-solid border-white rounded-3xl"
+                      : ""
+                  }`}
                   href="#hire-us"
-                  onClick={handleSectionClick}
+                  onClick={(e) => handleSectionClick(e, "hireUs")}
                 >
                   Hire Us
                 </a>
                 <a
-                  className="no-underline text-white text-center"
+                  className={`no-underline text-white text-center px-6 py-1 ${
+                    navOption === "login"
+                      ? "border border-solid border-white rounded-3xl"
+                      : ""
+                  }`}
                   href="#login"
-                  onClick={handleSectionClick}
+                  onClick={(e) => handleSectionClick(e, "login")}
                 >
                   Login
                 </a>
                 <a
-                  className="no-underline text-white text-center"
+                  className={`no-underline text-white text-center px-6 py-1 ${
+                    navOption === "signup"
+                      ? "border border-solid border-white rounded-3xl"
+                      : ""
+                  }`}
                   href="#signup"
-                  onClick={handleSectionClick}
+                  onClick={(e) => handleSectionClick(e, "signup")}
                 >
                   Signup
                 </a>
