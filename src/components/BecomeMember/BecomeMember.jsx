@@ -7,7 +7,12 @@ export const BecomeMember = () => {
   return (
     <div className="px-6 md:px-12 pt-16 md:pt-24 pb-8">
       <p>Choose Plan</p>
-      <h1 style={{ fontWeight: 600, marginBottom: "2rem" }}>Become Member</h1>
+      <h1 style={{ fontWeight: 600 }}>Become Member</h1>
+      <p className="mb-12"> 
+        A luxurious Royal feel at your door step. Subscribe from one of the
+        below plans and get something extra every time from Mr. Steamer whenever
+        you booked any of our paid services.{" "}
+      </p>
       <Grid container spacing={4}>
         {SARS.map((sar) => (
           <Grid key={sar.title} item xs={12} md={4}>

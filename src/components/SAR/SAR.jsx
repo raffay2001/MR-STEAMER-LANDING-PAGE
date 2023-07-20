@@ -10,7 +10,12 @@ export const SAR = ({ title, description }) => {
         {title}
       </h1>
       <div className="bg-white p-8 flex flex-col gap-10 justify-center items-center mb-4 rounded-lg">
-        <p className="text-sm leading-[25px]">{description}</p>
+        {/* <p className="text-sm leading-[25px]">{description}</p> */}
+        <ul>
+          {description.map((descItem) => (
+            <li>{descItem}</li>
+          ))}
+        </ul>
         <button
           className="border-none flex justify-center px-16 py-3 text-white cursor-pointer rounded-3xl"
           style={{

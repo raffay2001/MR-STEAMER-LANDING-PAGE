@@ -26,14 +26,15 @@ export const WhyUs = () => {
                   lineHeight: "34px",
                 }}
               >
-                We value your time and therefore washing your car at our car
-                wash will take no more than 15 minutes. Our company employs only
-                highly qualified specialists, we use high-quality cleaning
-                products and equipment, as well as premium materials. We value
-                your time and therefore washing your car at our car wash will
-                take no more than 15 minutes. Our company employs only highly
-                qualified specialists, we use high-quality cleaning products and
-                equipment, as well as premium materials.
+                Now you are just one tap away from an ecofriendly steam car
+                wash. No matter where you are, just book your Mr. Steamer and
+                enjoy the perk of premium car washing without any interruption
+                in your house hold chores or office work. Our company employs
+                only highly qualified specialists, we use high-quality cleaning
+                products and equipment, as well as premium materials. Our
+                company employs only highly skilled personals, we use
+                high-quality cleaning products and equipment, as well as premium
+                materials.
               </p>
               <div className="mt-8">
                 <button

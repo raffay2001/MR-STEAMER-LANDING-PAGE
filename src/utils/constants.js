@@ -50,39 +50,59 @@ export const FEATURES = [
 export const SERVICES = [
   {
     title: "Car Detailing",
-    description:
-      "You bring your car and choose the type of cleaning. When you go to drink coffee in our cafe or visit our shop You bring your car and choose the type of cleaning. When you go to ",
+    description: `
+      Mr. Steamer will make sure to
+      remove both visible and invisible
+      containments from interior and by
+      polishing the your vehicles Exterior
+      with blemish-free finish to keep
+      your Vehicles in its best possible
+      condition
+      `,
     icon: service1,
   },
   {
     title: "Tyre Replacement",
-    description:
-      "You bring your car and choose the type of cleaning. When you go to drink coffee in our cafe or visit our shop You bring your car and choose the type of cleaning. When you go to ",
+    description: `Let us know the details and
+      we will take care of it at your
+      location`,
     icon: service2,
   },
   {
     title: "Oil Change",
-    description:
-      "You bring your car and choose the type of cleaning. When you go to drink coffee in our cafe or visit our shop You bring your car and choose the type of cleaning. When you go to ",
+    description: `Not just wash we are here to
+      take care your to provide
+      servicing for your engine also.`,
     icon: service1,
   },
 ];
 
 export const SARS = [
   {
-    title: "SAR 20",
-    description:
-      "You bring your car and choose the type of cleaning. When you go to drink coffee in our cafe or visit our shop You bring your car and choose the type of cleaning. When you go to You bring your car and choose the type of cleaning. When",
+    title: "SAR 50/Year",
+    description: [
+      "Free Car wash after every 6 washes",
+      "Complementary Car Perfume",
+      "Free Battery Check",
+    ],
   },
   {
-    title: "SAR 30",
-    description:
-      "You bring your car and choose the type of cleaning. When you go to drink coffee in our cafe or visit our shop You bring your car and choose the type of cleaning. When you go to You bring your car and choose the type of cleaning. When",
+    title: "SAR 70/Year",
+    description: [
+      "Free car wash after every 5 washes",
+      "Complementary Car Perfume",
+      "Free Battery Check",
+    ],
   },
   {
-    title: "SAR 35",
-    description:
-      "You bring your car and choose the type of cleaning. When you go to drink coffee in our cafe or visit our shop You bring your car and choose the type of cleaning. When you go to You bring your car and choose the type of cleaning. When",
+    title: "SAR 100/Year",
+    description: [
+      "Free Car wash after every 3 washes",
+      "Free Car Perfume",
+      "Free Radiator water level check & refill",
+      "Free Battery Check",
+      "Polished for tyres even with normal car wash",
+    ],
   },
 ];
 

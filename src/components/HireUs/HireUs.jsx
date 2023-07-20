@@ -16,7 +16,10 @@ export const HireUs = () => {
               />
             </div>
             <div className="hidden md:block">
-              <h1 style={{ fontWeight: 600 }} className="mb-6 mt-12 md:mt-0 md:mb-[1.5rem]">
+              <h1
+                style={{ fontWeight: 600 }}
+                className="mb-6 mt-12 md:mt-0 md:mb-[1.5rem]"
+              >
                 Hire Us
               </h1>
               <div
@@ -46,9 +49,13 @@ export const HireUs = () => {
                 </button>
               </div>
               <p className="mt-8" style={{ fontWeight: 600 }}>
-                You bring your car and choose the type of cleaning. When you go
-                to drink coffee in our cafe or visit our shop You bring your car
-                and choose the type of cleaning. When you go to
+                Whether you are individual customer, female car owner or
+                commercial user now no need to get panic if you are in hurry for
+                a party, busy in a corporate meeting or stuck in fast moving
+                daily routine life, Mr. steamer is just one tap away to take
+                care of your Vehicle. Weather its Car wash, Car detailing, Oil
+                Change, Tyre Replacement, Road side assistance or Car toe
+                service we are 24/7 Available to serve you.
               </p>
               <div className="mt-6 md:mt-8">
                 <button
@@ -73,7 +80,10 @@ export const HireUs = () => {
               />
             </div>
             <div className="block md:hidden">
-              <h1 style={{ fontWeight: 600 }} className="mt-4 mb-6 md:mb-[3rem]">
+              <h1
+                style={{ fontWeight: 600 }}
+                className="mt-4 mb-6 md:mb-[3rem]"
+              >
                 Hire Us
               </h1>
               <div className="bg-[#F1F1F1] flex gap-2 px-8 py-4 rounded-md justify-center">
@@ -100,9 +110,13 @@ export const HireUs = () => {
                 </button>
               </div>
               <p className="mt-8" style={{ fontWeight: 600 }}>
-                You bring your car and choose the type of cleaning. When you go
-                to drink coffee in our cafe or visit our shop You bring your car
-                and choose the type of cleaning. When you go to
+                Whether you are individual customer, female car owner or
+                commercial user now no need to get panic if you are in hurry for
+                a party, busy in a corporate meeting or stuck in fast moving
+                daily routine life, Mr. steamer is just one tap away to take
+                care of your Vehicle. Weather its Car wash, Car detailing, Oil
+                Change, Tyre Replacement, Road side assistance or Car toe
+                service we are 24/7 Available to serve you.
               </p>
               <div className="mt-6 md:mt-8">
                 <button

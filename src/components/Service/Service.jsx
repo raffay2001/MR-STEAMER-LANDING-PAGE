@@ -4,7 +4,7 @@ export const Service = ({ title, description, icon }) => {
   return (
     <>
       <div className="hidden md:block bg-[#F0F0F0] h-[140px] w-full rounded-xl relative">
-        <div className="bg-white h-[230px] w-full rounded-xl absolute -top-3 left-4">
+        <div className="bg-white h-[260px] w-full rounded-xl absolute -top-3 left-4">
           <div className="relative w-full h-full">
             <img
               src={icon}
