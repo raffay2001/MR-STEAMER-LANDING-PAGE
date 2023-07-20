@@ -3,7 +3,7 @@ import React from "react";
 export const Service = ({ title, description, icon }) => {
   return (
     <>
-      <div className="hidden md:block bg-[#F0F0F0] h-[140px] w-full rounded-xl relative">
+      {/* <div className="hidden md:block bg-[#F0F0F0] h-[140px] w-full rounded-xl relative">
         <div className="bg-white h-[260px] w-full rounded-xl absolute -top-3 left-4">
           <div className="relative w-full h-full">
             <img
@@ -17,9 +17,9 @@ export const Service = ({ title, description, icon }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="bg-white w-full rounded-[20px] md:hidden">
+      <div className="bg-white w-full rounded-[20px] h-[28rem]">
         <img src={icon} alt={title} className="w-full" />
         <div className="p-4 flex flex-col gap-1">
           <p className="text-md font-[800]">{title}</p>

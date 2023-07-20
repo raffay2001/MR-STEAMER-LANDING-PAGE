@@ -75,6 +75,27 @@ export const SERVICES = [
       servicing for your engine also.`,
     icon: service1,
   },
+  {
+    title: "Car wash",
+    description: `Now no need to go anywhere
+    Order Mr. Steamer A at your
+    door step. Mr. Steamer Car 
+    wash service team is available
+    24/7.`,
+    icon: service2,
+  },
+  {
+    title: "Road Side Assistance",
+    description: `Need help! Mr. Steamer will
+    make sure to save your day.`,
+    icon: service1,
+  },
+  {
+    title: "Car Toe Service",
+    description: `Now Just open your Mobile
+    order `,
+    icon: service2,
+  },
 ];
 
 export const SARS = [

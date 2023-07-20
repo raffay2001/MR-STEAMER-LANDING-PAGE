@@ -13,22 +13,8 @@ export const Services = () => {
             We Only Provide Quality Care <br /> Services
           </h1>
         </div>
-        <div className="md:hidden block">
+        <div className="block">
           <Grid container spacing={4} marginTop={3}>
-            {SERVICES.map((service) => (
-              <Grid item xs={12} md={4}>
-                <Service
-                  key={service.title}
-                  title={service.title}
-                  description={service.description}
-                  icon={service.icon}
-                />
-              </Grid>
-            ))}
-          </Grid>
-        </div>
-        <div className="md:block hidden">
-          <Grid container spacing={4} marginTop={24}>
             {SERVICES.map((service) => (
               <Grid item xs={12} md={4}>
                 <Service
