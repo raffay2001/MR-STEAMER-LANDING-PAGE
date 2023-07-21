@@ -1,8 +1,11 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import HireUsImg from "../../assets/images/hireUs.png";
 
 export const HireUs = () => {
+  const [formMode, setFormMode] = useState("individual");
+  const [carVehicleType, setCarVehicleType] = useState("");
+
   return (
     <section id="hire-us">
       <div className="px-6 md:px-12 pt-10 md:pt-20 pb-8">
@@ -16,39 +19,15 @@ export const HireUs = () => {
               />
             </div>
             <div className="hidden md:block">
+              {/* hire us heading  */}
               <h1
                 style={{ fontWeight: 600 }}
-                className="mb-6 mt-12 md:mt-0 md:mb-[1.5rem]"
+                className="mb-6 mt-12 md:mt-0 md:mb-[0.5rem]"
               >
                 Hire Us
               </h1>
-              <div
-                className="bg-[#F1F1F1] flex gap-2 px-8 py-4 rounded-md"
-                style={{ width: "340px" }}
-              >
-                <button
-                  className="border-none flex flex-col py-2 px-4 text-white cursor-pointer"
-                  style={{
-                    borderRadius: "10px",
-                    background:
-                      "linear-gradient(131deg, #000 0%, #2C4694 100%)",
-                  }}
-                >
-                  <span>Service for</span>
-                  <span style={{ fontWeight: 600 }}>Individual Customer</span>
-                </button>
-                <button
-                  className="border-none flex flex-col py-2 px-4 text-[#666] cursor-pointer"
-                  style={{
-                    borderRadius: "10px",
-                    background: "white",
-                  }}
-                >
-                  <span>Service for</span>
-                  <span style={{ fontWeight: 600 }}>Corporate Sector</span>
-                </button>
-              </div>
-              <p className="mt-8" style={{ fontWeight: 600 }}>
+              {/* hire us info.  */}
+              <p className="mb-6" style={{ fontWeight: 600 }}>
                 Whether you are individual customer, female car owner or
                 commercial user now no need to get panic if you are in hurry for
                 a party, busy in a corporate meeting or stuck in fast moving
@@ -57,6 +36,95 @@ export const HireUs = () => {
                 Change, Tyre Replacement, Road side assistance or Car toe
                 service we are 24/7 Available to serve you.
               </p>
+              {/* button tabs  */}
+              <div
+                className="bg-[#F1F1F1] flex gap-2 px-8 py-4 rounded-md"
+                style={{ width: "340px" }}
+              >
+                <button
+                  className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
+                    formMode === "individual" ? "text-white" : "text-[#666]"
+                  }`}
+                  style={{
+                    borderRadius: "10px",
+                    background: `${
+                      formMode === "individual"
+                        ? "linear-gradient(131deg, #000 0%, #2C4694 100%)"
+                        : "white"
+                    }`,
+                  }}
+                  onClick={() => setFormMode("individual")}
+                >
+                  <span>Service for</span>
+                  <span style={{ fontWeight: 600 }}>Individual Customer</span>
+                </button>
+                <button
+                  className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
+                    formMode === "company" ? "text-white" : "text-[#666]"
+                  }`}
+                  style={{
+                    borderRadius: "10px",
+                    background: `${
+                      formMode === "company"
+                        ? "linear-gradient(131deg, #000 0%, #2C4694 100%)"
+                        : "white"
+                    }`,
+                  }}
+                  onClick={() => setFormMode("company")}
+                >
+                  <span>Service for</span>
+                  <span style={{ fontWeight: 600 }}>Corporate Sector</span>
+                </button>
+              </div>
+              {/* form to fill  */}
+              <div className="bg-[#F1F1F1] md:w-[300px] flex flex-col gap-5 px-8 py-4 mt-6 rounded-md">
+                <div className="flex flex-col gap-1">
+                  <label htmlFor="phone" className="text-sm">
+                    Vehicle Type
+                  </label>
+                  <select
+                    id="dropdown"
+                    placeholder="Select"
+                    className="p-2 border border-solid border-[#D2D7DE] transition-colors duration-300 focus:border-gray-400 focus:outline-none bg-white rounded-md"
+                    value={carVehicleType}
+                    onChange={(e) => setCarVehicleType(e.target.value)}
+                  >
+                    {formMode === "individual" ? (
+                      <>
+                        <option value="sedan">
+                          Sedan,coupe,sport,mini or similar
+                        </option>
+                        <option value="suv5">
+                          SUV 5 Seater, Short pickups or similar
+                        </option>
+                        <option value="suv7">
+                          SUV 7 Seater, Long Pickup or smilar
+                        </option>
+                        <option value="motorbikes">Motorbikes</option>
+                        <option value="vans">Vans</option>
+                      </>
+                    ) : (
+                      <>
+                        <option value="sedan">
+                          Sedan,coupe,sport,mini or similar
+                        </option>
+                        <option value="suv5">
+                          SUV 5 Seater, Short pickups or similar
+                        </option>
+                        <option value="suv7">
+                          SUV 7 Seater, Long Pickup or smilar
+                        </option>
+                        <option value="vans">Vans</option>
+                      </>
+                    )}
+                  </select>
+                </div>
+                {/* Price according to the vehicle type  */}
+                {/* <div className="flex flex-col gap-1">
+                  <p className="text-sm">Price: <br /></p>
+                </div> */}
+              </div>
+              {/* book now button  */}
               <div className="mt-6 md:mt-8">
                 <button
                   className="border-none flex flex-col p-2 text-white cursor-pointer rounded-3xl px-12 py-4"
@@ -80,36 +148,15 @@ export const HireUs = () => {
               />
             </div>
             <div className="block md:hidden">
+              {/* hire us heading  */}
               <h1
                 style={{ fontWeight: 600 }}
-                className="mt-4 mb-6 md:mb-[3rem]"
+                className="mt-4 mb-3 md:mb-[3rem]"
               >
                 Hire Us
               </h1>
-              <div className="bg-[#F1F1F1] flex gap-2 px-8 py-4 rounded-md justify-center">
-                <button
-                  className="border-none flex flex-col py-2 px-4 text-white cursor-pointer"
-                  style={{
-                    borderRadius: "10px",
-                    background:
-                      "linear-gradient(131deg, #000 0%, #2C4694 100%)",
-                  }}
-                >
-                  <span>Service for</span>
-                  <span style={{ fontWeight: 600 }}>Individual Customer</span>
-                </button>
-                <button
-                  className="border-none flex flex-col py-2 px-4 text-[#666] cursor-pointer"
-                  style={{
-                    borderRadius: "10px",
-                    background: "white",
-                  }}
-                >
-                  <span>Service for</span>
-                  <span style={{ fontWeight: 600 }}>Corporate Sector</span>
-                </button>
-              </div>
-              <p className="mt-8" style={{ fontWeight: 600 }}>
+              {/* hire us info.  */}
+              <p style={{ fontWeight: 600, marginBottom: "1rem" }}>
                 Whether you are individual customer, female car owner or
                 commercial user now no need to get panic if you are in hurry for
                 a party, busy in a corporate meeting or stuck in fast moving
@@ -118,6 +165,95 @@ export const HireUs = () => {
                 Change, Tyre Replacement, Road side assistance or Car toe
                 service we are 24/7 Available to serve you.
               </p>
+              {/* button tabs  */}
+              <div
+                className="bg-[#F1F1F1] flex gap-2 px-8 py-4 rounded-md"
+                style={{ width: "340px" }}
+              >
+                <button
+                  className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
+                    formMode === "individual" ? "text-white" : "text-[#666]"
+                  }`}
+                  style={{
+                    borderRadius: "10px",
+                    background: `${
+                      formMode === "individual"
+                        ? "linear-gradient(131deg, #000 0%, #2C4694 100%)"
+                        : "white"
+                    }`,
+                  }}
+                  onClick={() => setFormMode("individual")}
+                >
+                  <span>Service for</span>
+                  <span style={{ fontWeight: 600 }}>Individual Customer</span>
+                </button>
+                <button
+                  className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
+                    formMode === "company" ? "text-white" : "text-[#666]"
+                  }`}
+                  style={{
+                    borderRadius: "10px",
+                    background: `${
+                      formMode === "company"
+                        ? "linear-gradient(131deg, #000 0%, #2C4694 100%)"
+                        : "white"
+                    }`,
+                  }}
+                  onClick={() => setFormMode("company")}
+                >
+                  <span>Service for</span>
+                  <span style={{ fontWeight: 600 }}>Corporate Sector</span>
+                </button>
+              </div>
+              {/* form to fill  */}
+              <div className="bg-[#F1F1F1] md:w-[300px] flex flex-col gap-5 px-8 py-4 mt-6 rounded-md">
+                <div className="flex flex-col gap-1">
+                  <label htmlFor="phone" className="text-sm">
+                    Vehicle Type
+                  </label>
+                  <select
+                    id="dropdown"
+                    placeholder="Select"
+                    className="p-2 border border-solid border-[#D2D7DE] transition-colors duration-300 focus:border-gray-400 focus:outline-none bg-white rounded-md"
+                    value={carVehicleType}
+                    onChange={(e) => setCarVehicleType(e.target.value)}
+                  >
+                    {formMode === "individual" ? (
+                      <>
+                        <option value="sedan">
+                          Sedan,coupe,sport,mini or similar
+                        </option>
+                        <option value="suv5">
+                          SUV 5 Seater, Short pickups or similar
+                        </option>
+                        <option value="suv7">
+                          SUV 7 Seater, Long Pickup or smilar
+                        </option>
+                        <option value="motorbikes">Motorbikes</option>
+                        <option value="vans">Vans</option>
+                      </>
+                    ) : (
+                      <>
+                        <option value="sedan">
+                          Sedan,coupe,sport,mini or similar
+                        </option>
+                        <option value="suv5">
+                          SUV 5 Seater, Short pickups or similar
+                        </option>
+                        <option value="suv7">
+                          SUV 7 Seater, Long Pickup or smilar
+                        </option>
+                        <option value="vans">Vans</option>
+                      </>
+                    )}
+                  </select>
+                </div>
+                {/* Price according to the vehicle type  */}
+                {/* <div className="flex flex-col gap-1">
+                  <p className="text-sm">Price: <br /></p>
+                </div> */}
+              </div>
+              {/* book now button  */}
               <div className="mt-6 md:mt-8">
                 <button
                   className="border-none flex flex-col p-2 text-white cursor-pointer rounded-3xl px-12 py-4"

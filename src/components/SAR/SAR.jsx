@@ -12,8 +12,8 @@ export const SAR = ({ title, description }) => {
       <div className="bg-white p-8 flex flex-col gap-10 justify-center items-center mb-4 rounded-lg">
         {/* <p className="text-sm leading-[25px]">{description}</p> */}
         <ul>
-          {description.map((descItem) => (
-            <li>{descItem}</li>
+          {description.map((descItem, index) => (
+            <li key={`${descItem}-${index}`}>{descItem}</li>
           ))}
         </ul>
         <button

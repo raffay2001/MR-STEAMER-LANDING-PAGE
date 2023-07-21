@@ -15,10 +15,9 @@ export const Services = () => {
         </div>
         <div className="block">
           <Grid container spacing={4} marginTop={3}>
-            {SERVICES.map((service) => (
-              <Grid item xs={12} md={4}>
+            {SERVICES.map((service, index) => (
+              <Grid item xs={12} md={4} key={`${service.title}-${index}`}>
                 <Service
-                  key={service.title}
                   title={service.title}
                   description={service.description}
                   icon={service.icon}

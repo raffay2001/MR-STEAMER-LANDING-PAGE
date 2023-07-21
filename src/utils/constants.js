@@ -6,7 +6,6 @@ import feature5 from "../assets/images/feature_5.png";
 import feature6 from "../assets/images/feature_6.png";
 import service1 from "../assets/images/service1.png";
 import service2 from "../assets/images/service2.png";
-import service3 from "../assets/images/service3.png";
 
 export const FEATURES = [
   {
@@ -139,4 +138,10 @@ export const SUADIA_CITIES = [
   "Abha",
   "Khobar",
   "Jubail",
+];
+
+export const JOB_TYPES = [
+  {name: "Part Time", value: "partTime"},
+  {name: "Full Time", value: "FullTime"},
+  {name: "Earned With your Vehicles", value: "earnWithVehicles"},
 ];
