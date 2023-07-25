@@ -8,7 +8,7 @@ import InstagramLogo from "../../assets/images/instagram_logo.png";
 import FacebookLogo from "../../assets/images/facebook_logo.png";
 import LinkedInLogo from "../../assets/images/linkedin_logo.png";
 
-export const Footer = ({setOpen}) => {
+export const Footer = ({ setOpen }) => {
   return (
     <footer className="bg-black text-white px-12 mt-12 py-12">
       <Grid container spacing={4}>
@@ -41,7 +41,10 @@ export const Footer = ({setOpen}) => {
         </Grid>
         <Grid item xs={12} md={6}>
           <div className="flex gap-6 flex-col md:flex-row">
-            <button className="border-none md:w-[200px] md:h-[60px] p-2 rounded-lg bg-white text-[16px] cursor-pointer hover:opacity-[0.9] flex justify-center items-center gap-3" onClick={() => setOpen(true)}>
+            <button
+              className="border-none md:w-[200px] md:h-[60px] p-2 rounded-lg bg-white text-[16px] cursor-pointer hover:opacity-[0.9] flex justify-center items-center gap-3"
+              onClick={() => setOpen(true)}
+            >
               <img
                 src={googlePlayLogo}
                 alt="google_logo"
@@ -52,7 +55,10 @@ export const Footer = ({setOpen}) => {
                 <span className="font-bold">Google Play</span>
               </p>
             </button>
-            <button className="border-none md:w-[200px] md:h-[60px] p-2 rounded-lg bg-white text-[16px] cursor-pointer hover:opacity-[0.9] flex justify-center items-center gap-2" onClick={() => setOpen(true)}>
+            <button
+              className="border-none md:w-[200px] md:h-[60px] p-2 rounded-lg bg-white text-[16px] cursor-pointer hover:opacity-[0.9] flex justify-center items-center gap-2"
+              onClick={() => setOpen(true)}
+            >
               <img
                 src={appleLogo}
                 alt="apple_logo"
@@ -104,9 +110,27 @@ export const Footer = ({setOpen}) => {
             </div>
             <div className="flex items-center justify-start md:justify-center gap-4">
               <span className="text-[#ffffff80]">Follow Us</span>
-              <img src={InstagramLogo} alt="instagram_logo" className="w-7" />
-              <img src={FacebookLogo} alt="facebook_logo" className="w-7" />
-              <img src={LinkedInLogo} alt="linkedin_logo" className="w-7" />
+              <a
+                href="https://www.instagram.com/mrsteamerofficial/?igshid=NTc4MTIwNjQ2YQ%3D%3D"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={InstagramLogo} alt="instagram_logo" className="w-7" />
+              </a>
+              <a
+                href="https://web.facebook.com/profile.php?id=100093985143702&mibextid=LQQJ4d&_rdc=1&_rdr"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={FacebookLogo} alt="facebook_logo" className="w-7" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/mr-steamer/?trk=organization_guest_main-feed-card_feed-actor-name"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={LinkedInLogo} alt="linkedin_logo" className="w-7" />
+              </a>
             </div>
           </div>
         </Grid>
