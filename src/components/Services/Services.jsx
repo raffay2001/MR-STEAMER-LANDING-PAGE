@@ -6,7 +6,7 @@ import { SERVICES } from "../../utils/constants";
 export const Services = () => {
   return (
     <section id="services">
-      <div className="px-6 md:px-12 pt-6 pb-16 md:pb-32 bg-black">
+      <div className="px-6 md:px-12 pt-16 pb-16 md:pb-32 bg-black">
         <div className="flex flex-col gap-2">
           <p className="text-white">Find Who We Are</p>
           <h1 className="text-white">

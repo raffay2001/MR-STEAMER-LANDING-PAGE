@@ -12,7 +12,98 @@ import "slick-carousel/slick/slick-theme.css";
 const HeroSlide = ({ slideNo, setOpen }) => {
   const handleOpen = () => setOpen(true);
   return (
-    <Grid container spacing={2}>
+    <Grid
+      container
+      spacing={2}
+      className="px-6 md:px-12 relative md:pt-16 md:h-[50rem]"
+    >
+      <div className="hidden md:flex justify-center">
+        <svg
+          className="w-[700px] h-[700px] absolute top-4 left-0 -z-10"
+          viewBox="0 0 570 820"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_d_154_779)">
+            <circle
+              cx="160"
+              cy="406"
+              r="343"
+              stroke="#D8D8D8"
+              stroke-opacity="0.2"
+              stroke-width="125"
+              shape-rendering="crispEdges"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_154_779"
+              x="-249.5"
+              y="0.5"
+              width="819"
+              height="819"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_154_779"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_154_779"
+                result="shape"
+              />
+            </filter>
+          </defs>
+        </svg>
+
+        {slideNo === 1 && (
+          <div className="absolute top-4 right-0">
+            <div className="relative">
+              <img
+                src={Rocket}
+                alt="rocket_image"
+                style={{
+                  width: "40px",
+                  position: "absolute",
+                  top: 180,
+                  left: 200,
+                }}
+              />
+              <img
+                src={Hero1}
+                alt="hero_image"
+                className="w-full md:w-[700px]"
+              />
+            </div>
+          </div>
+        )}
+
+        {slideNo === 2 && (
+          <img
+            src={Hero2}
+            alt="hero_image"
+            className="w-full md:w-[700px] absolute top-4 right-0"
+          />
+        )}
+      </div>
       <Grid item xs={12} md={6}>
         <div className="block md:hidden">
           {slideNo === 1 && (
@@ -55,7 +146,7 @@ const HeroSlide = ({ slideNo, setOpen }) => {
               />
               <p className="flex flex-col gap-[0.5px] items-start">
                 <span>Get it on</span>
-                <span className="font-bold">Google Play</span>
+                <span className="font-semibold">Google Play</span>
               </p>
             </button>
             <button
@@ -69,37 +160,13 @@ const HeroSlide = ({ slideNo, setOpen }) => {
               />
               <p className="flex flex-col gap-[0.5px] items-start">
                 <span>Download on the</span>
-                <span className="font-bold">Apple Store</span>
+                <span className="font-semibold">Apple Store</span>
               </p>
             </button>
           </div>
         </div>
       </Grid>
       <Grid item xs={12} md={6}>
-        <div className="hidden md:flex justify-center">
-          {slideNo === 1 && (
-            <div className="relative">
-              <img
-                src={Rocket}
-                alt="rocket_image"
-                style={{
-                  width: "40px",
-                  position: "absolute",
-                  top: 130,
-                  left: 142,
-                }}
-              />
-              <img
-                src={Hero1}
-                alt="hero_image"
-                className="w-full md:w-[520px]"
-              />
-            </div>
-          )}
-          {slideNo === 2 && (
-            <img src={Hero2} alt="hero_image" className="w-full md:w-[520px]" />
-          )}
-        </div>
         <div className="flex w-full md:hidden flex-col gap-8 items-center">
           <p className="text-[#2A2D32] text-[40px] leading-[60px] md:text-[68px] md:leading-[90px] text-center">
             Now steam car wash at your door step is{" "}
@@ -117,7 +184,7 @@ const HeroSlide = ({ slideNo, setOpen }) => {
               />
               <p className="flex flex-col gap-[0.5px] items-start">
                 <span>Get it on</span>
-                <span className="font-bold">Google Play</span>
+                <span className="font-semibold">Google Play</span>
               </p>
             </button>
             <button
@@ -131,7 +198,7 @@ const HeroSlide = ({ slideNo, setOpen }) => {
               />
               <p className="flex flex-col gap-[0.5px] items-start">
                 <span>Download on the</span>
-                <span className="font-bold">Apple Store</span>
+                <span className="font-semibold">Apple Store</span>
               </p>
             </button>
           </div>
@@ -143,8 +210,8 @@ const HeroSlide = ({ slideNo, setOpen }) => {
 
 export const Hero = ({ setOpen }) => {
   return (
-    <section id="home">
-      <div className="pt-8 md:pt-12 px-6 md:px-12">
+    <section id="home relative">
+      <div className="pt-8 md:pt-12">
         <CarouselX setOpen={setOpen} />
       </div>
     </section>

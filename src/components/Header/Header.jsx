@@ -56,7 +56,7 @@ export const Header = (props) => {
           isScrolled ? "fixed top-0 left-0 right-0" : ""
         }`}
       >
-        <div className="flex gap-3">
+        <div className="flex gap-5">
           <div>
             <a href="/">
               <img src={Logo} alt="logo_0" className="w-15 h-10" />
@@ -183,7 +183,7 @@ export const Header = (props) => {
         <IconButton sx={{ position: "absolute", left: 4 }} onClick={toggleMenu}>
           <MenuIcon className="text-white" />
         </IconButton>
-        <div className="flex gap-2">
+        <div className="flex gap-5">
           <div>
             <a href="/" className="mb-1">
               <img src={Logo} alt="logo_0" className="w-[80px]" />

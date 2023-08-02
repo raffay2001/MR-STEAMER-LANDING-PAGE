@@ -52,7 +52,7 @@ export const Footer = ({ setOpen }) => {
               />
               <p className="flex flex-col items-start gap-[0.5px]">
                 <span>Get it on</span>
-                <span className="font-bold">Google Play</span>
+                <span className="font-semibold">Google Play</span>
               </p>
             </button>
             <button
@@ -66,7 +66,7 @@ export const Footer = ({ setOpen }) => {
               />
               <p className="flex flex-col gap-[0.5px] items-start">
                 <span>Download on the</span>
-                <span className="font-bold">Apple Store</span>
+                <span className="font-semibold">Apple Store</span>
               </p>
             </button>
           </div>
