@@ -7,8 +7,10 @@ import googlePlayLogo from "../../assets/images/google_play_logo.png";
 import InstagramLogo from "../../assets/images/instagram_logo.png";
 import FacebookLogo from "../../assets/images/facebook_logo.png";
 import LinkedInLogo from "../../assets/images/linkedin_logo.png";
+import { useContextValue } from "../../context/StateProvider";
 
 export const Footer = ({ setOpen }) => {
+  const { t } = useContextValue();
   return (
     <footer className="bg-black text-white px-12 mt-12 py-12">
       <Grid container spacing={4}>
@@ -20,7 +22,7 @@ export const Footer = ({ setOpen }) => {
                   <img src={Logo} alt="logo_0" className="w-15 h-10" />
                 </a>
                 <div className="text-sm border-x-0 border-y-[0.1px] border-solid border-white">
-                  Steam it Clean it
+                  {t("common.logoTitle")}
                 </div>
               </div>
               <div className="w-[0.1px] bg-gray-500"></div>
@@ -29,13 +31,10 @@ export const Footer = ({ setOpen }) => {
               </div>
             </div>
             <p className="text-sm w-80 text-justify">
-              We value your time and therefore washing your car at our car wash
-              will take no more than 15 minutes. We value your time and
-              therefore washing your car at our car wash will take no more than
-              15 minutes
+              {t("footer.description")}
             </p>
             <p style={{ color: "rgba(255, 255, 255, 0.50)" }}>
-              Copyright ©2023 Mr. Steamer All rights reserved.
+              {t("footer.copyrightText")}
             </p>
           </div>
         </Grid>
@@ -51,8 +50,8 @@ export const Footer = ({ setOpen }) => {
                 style={{ width: "33px", height: "33px" }}
               />
               <p className="flex flex-col items-start gap-[0.5px]">
-                <span>Get it on</span>
-                <span className="font-semibold">Google Play</span>
+                <span>{t("common.googlePlayBtnTextPt1")}</span>
+                <span className="font-semibold">{t("common.googlePlayBtnTextPt2")}</span>
               </p>
             </button>
             <button
@@ -65,8 +64,8 @@ export const Footer = ({ setOpen }) => {
                 style={{ width: "33px", height: "33px" }}
               />
               <p className="flex flex-col gap-[0.5px] items-start">
-                <span>Download on the</span>
-                <span className="font-semibold">Apple Store</span>
+                <span>{t("common.appleStoreBtnTextPt1")}</span>
+                <span className="font-semibold">{t("common.appleStoreBtnTextPt2")}</span>
               </p>
             </button>
           </div>
@@ -78,17 +77,17 @@ export const Footer = ({ setOpen }) => {
                 <ul className="list-none flex flex-col gap-8">
                   <li className="hover:opacity-[0.9]">
                     <a href="#home" className="no-underline text-white">
-                      Home
+                      {t("common.home")}
                     </a>
                   </li>
                   <li className="hover:opacity-[0.9]">
                     <a href="#services" className="no-underline text-white">
-                      Services
+                      {t("common.services")}
                     </a>
                   </li>
                   <li className="hover:opacity-[0.9]">
                     <a href="#about" className="no-underline text-white">
-                      About Us
+                      {t("common.about")}
                     </a>
                   </li>
                 </ul>
@@ -97,19 +96,21 @@ export const Footer = ({ setOpen }) => {
                 <ul className="list-none flex flex-col gap-8">
                   <li className="hover:opacity-[0.9]">
                     <a href="#contact" className="no-underline text-white">
-                      Contact Us
+                      {t("common.contactUs")}
                     </a>
                   </li>
                   <li className="hover:opacity-[0.9]">
                     <a href="#hire-us" className="no-underline text-white">
-                      Hire Us
+                      {t("common.hireUs")}
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="flex items-center justify-start md:justify-center gap-4">
-              <span className="text-[#ffffff80]">Follow Us</span>
+              <span className="text-[#ffffff80]">
+                {t("footer.followUsText")}
+              </span>
               <a
                 href="https://www.instagram.com/mrsteamerofficial/?igshid=NTc4MTIwNjQ2YQ%3D%3D"
                 target="_blank"

@@ -114,29 +114,49 @@ export const SERVICES = [
 
 export const SARS = [
   {
+    key: "sar50PerYear",
     title: "SAR 50/Year",
-    description: [
+    descriptionEn: [
       "Free Car wash after every 6 washes",
       "Complementary Car Perfume",
       "Free Battery Check",
     ],
+    descriptionAr: [
+      "غسيل مجاني للسيارة بعد كل 6 غسلات",
+      "عطر السيارة التكميلي",
+      "فحص البطارية مجانا",
+    ],
   },
   {
+    key: "sar70PerYear",
     title: "SAR 70/Year",
-    description: [
+    descriptionEn: [
       "Free car wash after every 5 washes",
       "Complementary Car Perfume",
       "Free Battery Check",
     ],
+    descriptionAr: [
+      "غسيل مجاني للسيارة بعد كل 5 عمليات غسيل",
+      "عطر السيارة التكميلي",
+      "فحص البطارية مجانا",
+    ],
   },
   {
+    key: "sar100PerYear",
     title: "SAR 100/Year",
-    description: [
+    descriptionEn: [
       "Free Car wash after every 3 washes",
       "Free Car Perfume",
       "Free Radiator water level check & refill",
       "Free Battery Check",
       "Polished for tyres even with normal car wash",
+    ],
+    descriptionAr: [
+      "غسيل مجاني للسيارة بعد كل 3 غسلات",
+      "عطر سيارة مجاني",
+      "فحص مستوى ماء الراديتر مجانا",
+      "فحص البطارية مجانا",
+      "ملمع للإطارات حتى مع الغسيل العادي للسيارة",
     ],
   },
 ];
@@ -156,7 +176,11 @@ export const SUADIA_CITIES = [
 ];
 
 export const JOB_TYPES = [
-  { name: "Part Time", value: "partTime" },
-  { name: "Full Time", value: "FullTime" },
-  { name: "Earned With your Vehicles", value: "earnWithVehicles" },
+  { key: "partTime", name: "Part Time", value: "partTime" },
+  { key: "fullTime", name: "Full Time", value: "FullTime" },
+  {
+    key: "earnWithYourVehicles",
+    name: "Earned With your Vehicles",
+    value: "earnWithVehicles",
+  },
 ];

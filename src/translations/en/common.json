@@ -29,7 +29,13 @@
         "Khobar": "Khobar",
         "Jubail": "Jubail"
       }
-    }
+    },
+    "logoTitle": "Steam it Clean it",
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "contactUs": "Contact Us",
+    "hireUs": "Hire Us"
   },
   "modal": {
     "heading": "Submit to Notify",
@@ -37,12 +43,6 @@
     "buttonText": "Notify Me"
   },
   "header": {
-    "logoTitle": "Steam it Clean it",
-    "home": "Home",
-    "services": "Services",
-    "about": "About Us",
-    "contactUs": "Contact Us",
-    "hireUs": "Hire Us",
     "login": "Login",
     "signup": "Sign Up"
   },
@@ -125,5 +125,41 @@
     "heading": "Why Us",
     "description": "Now you are just one tap away from an ecofriendly steam car wash. No matter where you are, just book your Mr. Steamer and enjoy the perk of premium car washing without any interruption in your house hold chores or office work. Our company employs only highly qualified specialists, we use high-quality cleaning products and equipment, as well as premium materials. Our company employs only highly skilled personals, we use high-quality cleaning products and equipment, as well as premium materials.",
     "buttonText": "Contact Us"
+  },
+  "becomeMrSteamer": {
+    "heading": "Become Mr. Steamer",
+    "formHeading": "Registration with us",
+    "formJobTypeField": {
+      "heading": "Job Type",
+      "select": "Select",
+      "jobTypes": {
+        "partTime": "Part Time",
+        "fullTime": "Full Time",
+        "earnWithYourVehicles": "Earn With Your Vehicles"
+      }
+    },
+    "registerButtonText": "Register"
+  },
+  "becomeMember": {
+    "heading": "Choose Plan",
+    "subHeading": "Become Member",
+    "description": "A luxurious Royal feel at your door step. Subscribe from one of the below plans and get something extra every time from Mr. Steamer whenever you booked any of our paid services.",
+    "packageList": {
+      "sar50PerYear": {
+        "title": "SAR 50/Year"
+      },
+      "sar70PerYear": {
+        "title": "SAR 70/Year"
+      },
+      "sar100PerYear": {
+        "title": "SAR 100/Year"
+      }
+    },
+    "subscribeButtonText": "Subscribe"
+  },
+  "footer": {
+    "description": "We value your time and therefore washing your car at our car wash will take no more than 15 minutes. We value your time and therefore washing your car at our car wash will take no more than 15 minutes.",
+    "copyrightText": "Copyright ©2023 Mr. Steamer All rights reserved.",
+    "followUsText": "Follow Us"
   }
 }

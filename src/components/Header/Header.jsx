@@ -64,7 +64,7 @@ export const Header = (props) => {
               <img src={Logo} alt="logo_0" className="w-15 h-10" />
             </a>
             <div className="text-sm border-x-0 border-y-[0.1px] border-solid border-white">
-              {t("header.logoTitle")}
+              {t("common.logoTitle")}
             </div>
           </div>
           <div className="w-[0.1px] bg-gray-500"></div>
@@ -87,7 +87,7 @@ export const Header = (props) => {
                   href="#home"
                   onClick={(e) => handleSectionClick(e, "home")}
                 >
-                  {t("header.home")}
+                  {t("common.home")}
                 </a>
               </li>
               <li
@@ -102,7 +102,7 @@ export const Header = (props) => {
                   href="#services"
                   onClick={(e) => handleSectionClick(e, "services")}
                 >
-                  {t("header.services")}
+                  {t("common.services")}
                 </a>
               </li>
               <li
@@ -117,7 +117,7 @@ export const Header = (props) => {
                   href="#about"
                   onClick={(e) => handleSectionClick(e, "about")}
                 >
-                  {t("header.about")}
+                  {t("common.about")}
                 </a>
               </li>
               <li
@@ -132,7 +132,7 @@ export const Header = (props) => {
                   href="#contact"
                   onClick={(e) => handleSectionClick(e, "contact")}
                 >
-                  {t("header.contactUs")}
+                  {t("common.contactUs")}
                 </a>
               </li>
               <li
@@ -147,7 +147,7 @@ export const Header = (props) => {
                   href="#hire-us"
                   onClick={(e) => handleSectionClick(e, "hireUs")}
                 >
-                  {t("header.hireUs")}
+                  {t("common.hireUs")}
                 </a>
               </li>
             </ul>
@@ -257,7 +257,7 @@ export const Header = (props) => {
               <img src={Logo} alt="logo_0" className="w-[80px]" />
             </a>
             <div className="text-sm border-x-0 border-y-[0.1px] border-solid border-gray-500">
-              {t("header.logoTitle")}
+              {t("common.logoTitle")}
             </div>
           </div>
           <div className="w-[0.1px] bg-gray-500"></div>
@@ -279,7 +279,7 @@ export const Header = (props) => {
                     <img src={Logo} alt="logo_0" className="w-[80px]" />
                   </a>
                   <div className="text-sm border-x-0 border-y-[0.1px] border-solid border-gray-500">
-                    {t("header.logoTitle")}
+                    {t("common.logoTitle")}
                   </div>
                 </div>
               </div>
@@ -312,7 +312,7 @@ export const Header = (props) => {
                   href="#home"
                   onClick={(e) => handleSectionClick(e, "home")}
                 >
-                  {t("header.home")}
+                  {t("common.home")}
                 </a>
                 <a
                   className={`no-underline text-white px-0 py-1 ${
@@ -323,7 +323,7 @@ export const Header = (props) => {
                   href="#services"
                   onClick={(e) => handleSectionClick(e, "services")}
                 >
-                  {t("header.services")}
+                  {t("common.services")}
                 </a>
                 <a
                   className={`no-underline text-white px-0 py-1 ${
@@ -334,7 +334,7 @@ export const Header = (props) => {
                   href="#about"
                   onClick={(e) => handleSectionClick(e, "about")}
                 >
-                  {t("header.about")}
+                  {t("common.about")}
                 </a>
                 <a
                   className={`no-underline text-white px-0 py-1 ${
@@ -345,7 +345,7 @@ export const Header = (props) => {
                   href="#contact"
                   onClick={(e) => handleSectionClick(e, "contact")}
                 >
-                  {t("header.contactUs")}
+                  {t("common.contactUs")}
                 </a>
                 <a
                   className={`no-underline text-white px-0 py-1 ${
@@ -356,7 +356,7 @@ export const Header = (props) => {
                   href="#hire-us"
                   onClick={(e) => handleSectionClick(e, "hireUs")}
                 >
-                  {t("header.hireUs")}
+                  {t("common.hireUs")}
                 </a>
               </div>
               <div className="flex flex-col gap-2">

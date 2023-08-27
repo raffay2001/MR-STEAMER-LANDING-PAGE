@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import BecomeMrSteamerImg from "../../assets/images/BecomeMrSteamer.png";
 import { JOB_TYPES, SUADIA_CITIES } from "../../utils/constants";
+import { useContextValue } from "../../context/StateProvider";
 
 export const BecomeMrSteamer = () => {
   const [formMode, setFormMode] = useState("individual");
@@ -10,13 +11,15 @@ export const BecomeMrSteamer = () => {
   const [email, setEmail] = useState("");
   const [city, setCity] = useState("");
   const [jobType, setJobType] = useState("");
+  const { t, lang } = useContextValue();
+
   return (
     <section id="contact">
       <div className="px-6 md:px-12 pt-12 md:pt-28 pb-8">
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
             <h1 style={{ fontWeight: 600 }} className="mb-[1rem] md:mb-[1rem]">
-              Become Mr. Steamer
+              {t("becomeMrSteamer.heading")}
             </h1>
             {/* button tabs  */}
             <div
@@ -25,8 +28,8 @@ export const BecomeMrSteamer = () => {
             >
               <button
                 className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
-                  formMode === "individual" ? "text-white" : "text-[#666]"
-                }`}
+                  lang === "ar" ? "flex-[0.5]" : ""
+                } ${formMode === "individual" ? "text-white" : "text-[#666]"}`}
                 style={{
                   borderRadius: "10px",
                   background: `${
@@ -37,13 +40,15 @@ export const BecomeMrSteamer = () => {
                 }}
                 onClick={() => setFormMode("individual")}
               >
-                <span>Service for</span>
-                <span style={{ fontWeight: 600 }}>Individual Customer</span>
+                <span>{t("common.serviceForButtonHeading")}</span>
+                <span style={{ fontWeight: 600 }}>
+                  {t("common.indCustomerButtonText")}
+                </span>
               </button>
               <button
                 className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
-                  formMode === "company" ? "text-white" : "text-[#666]"
-                }`}
+                  lang === "ar" ? "flex-[0.5]" : ""
+                } ${formMode === "company" ? "text-white" : "text-[#666]"}`}
                 style={{
                   borderRadius: "10px",
                   background: `${
@@ -54,17 +59,19 @@ export const BecomeMrSteamer = () => {
                 }}
                 onClick={() => setFormMode("company")}
               >
-                <span>Service for</span>
-                <span style={{ fontWeight: 600 }}>Corporate Sector</span>
+                <span>{t("common.serviceForButtonHeading")}</span>
+                <span style={{ fontWeight: 600 }}>
+                  {t("common.corpCustomerButtonText")}
+                </span>
               </button>
             </div>
             <div className="bg-[#F1F1F1] md:w-[300px] flex flex-col gap-5 px-8 py-4 mt-8 rounded-md">
               <p style={{ fontWeight: 600, fontSize: 18 }}>
-                Registration with us
+                {t("becomeMrSteamer.formHeading")}
               </p>
               <div className="flex flex-col gap-1">
                 <label htmlFor="jobType" className="text-sm">
-                  Job Type
+                  {t("becomeMrSteamer.formJobTypeField.heading")}
                 </label>
                 <select
                   id="jobType"
@@ -73,20 +80,22 @@ export const BecomeMrSteamer = () => {
                   onChange={(e) => setJobType(e.target.value)}
                 >
                   {JOB_TYPES.map((jobType) => (
-                    <option key={jobType.name} value={jobType.value}>
-                      {jobType.name}
+                    <option key={jobType.key} value={jobType.value}>
+                      {t(
+                        `becomeMrSteamer.formJobTypeField.jobTypes.${jobType.key}`
+                      )}
                     </option>
                   ))}
                 </select>
               </div>
               <div className="flex flex-col gap-1">
                 <label htmlFor="name" className="text-sm">
-                  Name
+                  {t("common.formNameField")}
                 </label>
                 <input
                   type="text"
                   id="name"
-                  placeholder="Enter Full Name"
+                  placeholder={t("common.formNameFieldPlaceholder")}
                   className="p-2 border border-solid border-[#D2D7DE] transition-colors duration-300 rounded-md focus:border-gray-400 focus:outline-none"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -94,12 +103,12 @@ export const BecomeMrSteamer = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <label htmlFor="phone" className="text-sm">
-                  Mobile Number
+                  {t("common.formNumberField")}
                 </label>
                 <input
                   type="text"
                   id="phone"
-                  placeholder="Enter Mobile Number"
+                  placeholder={t("common.formNumberFieldPlaceholder")}
                   className="p-2 border border-solid border-[#D2D7DE] transition-colors duration-300 rounded-md focus:border-gray-400 focus:outline-none"
                   value={mobile}
                   onChange={(e) => setMobile(e.target.value)}
@@ -107,12 +116,12 @@ export const BecomeMrSteamer = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <label htmlFor="email" className="text-sm">
-                  Email
+                  {t("common.formEmailField")}
                 </label>
                 <input
                   type="email"
                   id="email"
-                  placeholder="Enter Email Address"
+                  placeholder={t("common.formEmailFieldPlaceholder")}
                   className="p-2 border border-solid border-[#D2D7DE] transition-colors duration-300 rounded-md focus:border-gray-400 focus:outline-none"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -120,7 +129,7 @@ export const BecomeMrSteamer = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <label htmlFor="city" className="text-sm">
-                  City
+                  {t("common.formCityField.heading")}
                 </label>
                 <select
                   id="city"
@@ -128,10 +137,10 @@ export const BecomeMrSteamer = () => {
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
                 >
-                  <option>Select</option>
+                  <option>{t("common.formCityField.select")}</option>
                   {SUADIA_CITIES.map((city) => (
                     <option key={city} value={city.toLowerCase()}>
-                      {city}
+                      {t(`common.formCityField.cities.${city}`)}
                     </option>
                   ))}
                 </select>
@@ -143,7 +152,7 @@ export const BecomeMrSteamer = () => {
                 }}
                 // onClick={() => alert(JSON.stringify({name, email, mobile, city, jobType}))}
               >
-                <p>Register</p>
+                <p>{t(`becomeMrSteamer.registerButtonText`)}</p>
               </button>
             </div>
           </Grid>
