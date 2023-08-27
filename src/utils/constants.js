@@ -6,6 +6,9 @@ import feature5 from "../assets/images/feature_5.png";
 import feature6 from "../assets/images/feature_6.png";
 import service1 from "../assets/images/service1.png";
 import service2 from "../assets/images/service2.png";
+import service3 from "../assets/images/service3.png";
+import service4 from "../assets/images/service4.png";
+import service5 from "../assets/images/service5.png";
 
 export const FEATURES = [
   {
@@ -72,7 +75,7 @@ export const SERVICES = [
     description: `Not just wash we are here to
       take care your to provide
       servicing for your engine also.`,
-    icon: service1,
+    icon: service3,
   },
   {
     title: "Car wash",
@@ -87,13 +90,13 @@ export const SERVICES = [
     title: "Road Side Assistance",
     description: `Need help! Mr. Steamer will
     make sure to save your day.`,
-    icon: service1,
+    icon: service4,
   },
   {
     title: "Car Toe Service",
     description: `Now Just open your Mobile
     order `,
-    icon: service2,
+    icon: service5,
   },
 ];
 
@@ -141,7 +144,7 @@ export const SUADIA_CITIES = [
 ];
 
 export const JOB_TYPES = [
-  {name: "Part Time", value: "partTime"},
-  {name: "Full Time", value: "FullTime"},
-  {name: "Earned With your Vehicles", value: "earnWithVehicles"},
+  { name: "Part Time", value: "partTime" },
+  { name: "Full Time", value: "FullTime" },
+  { name: "Earned With your Vehicles", value: "earnWithVehicles" },
 ];
