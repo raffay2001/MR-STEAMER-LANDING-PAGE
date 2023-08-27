@@ -1,7 +1,12 @@
 {
-  "modal": {
-    "heading": "Submit to Notify",
-    "text": "We are just around the corner. fill the details to get the notify.",
+  "common": {
+    "serviceForButtonHeading": "Service for",
+    "indCustomerButtonText": "Individual Customer",
+    "corpCustomerButtonText": "Corporate Sector",
+    "googlePlayBtnTextPt1": "Get it on",
+    "googlePlayBtnTextPt2": "Google Play",
+    "appleStoreBtnTextPt1": "Download on the",
+    "appleStoreBtnTextPt2": "Apple Store",
     "formNameField": "Name",
     "formNumberField": "Mobile Number",
     "formEmailField": "Email",
@@ -24,7 +29,11 @@
         "Khobar": "Khobar",
         "Jubail": "Jubail"
       }
-    },
+    }
+  },
+  "modal": {
+    "heading": "Submit to Notify",
+    "text": "We are just around the corner. fill the details to get the notify.",
     "buttonText": "Notify Me"
   },
   "header": {
@@ -39,11 +48,7 @@
   },
   "hero": {
     "headingPartOne": "Now steam car wash at your door step is",
-    "headingPartTwo": "just one tap away.",
-    "googlePlayBtnTextPt1": "Get it on",
-    "googlePlayBtnTextPt2": "Google Play",
-    "appleStoreBtnTextPt1": "Download on the",
-    "appleStoreBtnTextPt2": "Apple Store"
+    "headingPartTwo": "just one tap away."
   },
   "features": {
     "heading": "Our Features",
@@ -73,5 +78,52 @@
         "description": "We use high-quality cleaning agents and equipment as well as premium materials."
       }
     }
+  },
+  "services": {
+    "heading": "Find Who We Are",
+    "subHeading1": "We Only Provide Quality Care",
+    "subHeading2": "Services",
+    "serviceList": {
+      "carDetailing": {
+        "title": "Car Detailing",
+        "description": "Mr. Steamer will make sure to remove both visible and invisible containments from interior and by polishing the your vehicles Exterior with blemish-free finish to keep your Vehicles in its best possible condition"
+      },
+      "tyreReplacement": {
+        "title": "Tyre Replacement",
+        "description": "Let us know the details and we will take care of it at your location"
+      },
+      "oilChange": {
+        "title": "Oil Change",
+        "description": "Not just wash we are here to take care your to provide servicing for your engine also."
+      },
+      "carWash": {
+        "title": "Car wash",
+        "description": "Now no need to go anywhere Order Mr. Steamer A at your door step. Mr. Steamer Car wash service team is available 24/7."
+      },
+      "roadSideAssistance": {
+        "title": "Road Side Assistance",
+        "description": "Need help! Mr. Steamer will make sure to save your day."
+      },
+      "carToeService": {
+        "title": "Car Toe Service",
+        "description": "Now Just open your Mobile order"
+      }
+    }
+  },
+  "hireUs": {
+    "heading": "Hire Us",
+    "description": "Whether you are individual customer, female car owner or commercial user now no need to get panic if you are in hurry for a party, busy in a corporate meeting or stuck in fast moving daily routine life, Mr. steamer is just one tap away to take care of your Vehicle. Weather its Car wash, Car detailing, Oil Change, Tyre Replacement, Road side assistance or Car toe service we are 24/7 Available to serve you.",
+    "formLabel": "Vehicle Type",
+    "formOption1": "Sedan,coupe,sport,mini or similar",
+    "formOption2": "SUV 5 Seater, Short pickups or similar",
+    "formOption3": "SUV 7 Seater, Long Pickup or similar",
+    "formOption4": "Motorbikes",
+    "formOption5": "Vans",
+    "bookNowBtnText": "Book Now"
+  },
+  "whyUs": {
+    "heading": "Why Us",
+    "description": "Now you are just one tap away from an ecofriendly steam car wash. No matter where you are, just book your Mr. Steamer and enjoy the perk of premium car washing without any interruption in your house hold chores or office work. Our company employs only highly qualified specialists, we use high-quality cleaning products and equipment, as well as premium materials. Our company employs only highly skilled personals, we use high-quality cleaning products and equipment, as well as premium materials.",
+    "buttonText": "Contact Us"
   }
 }

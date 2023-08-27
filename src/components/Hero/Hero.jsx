@@ -147,9 +147,9 @@ const HeroSlide = ({ slideNo, setOpen }) => {
                 className="w-[30px] h-[30px] md:w-[33px] md:h-[33px]"
               />
               <p className="flex flex-col gap-[0.5px] items-start">
-                <span>{t("hero.googlePlayBtnTextPt1")}</span>
+                <span>{t("common.googlePlayBtnTextPt1")}</span>
                 <span className="font-semibold">
-                  {t("hero.googlePlayBtnTextPt2")}
+                  {t("common.googlePlayBtnTextPt2")}
                 </span>
               </p>
             </button>
@@ -163,9 +163,9 @@ const HeroSlide = ({ slideNo, setOpen }) => {
                 className="w-[30px] h-[30px] md:w-[33px] md:h-[33px]"
               />
               <p className="flex flex-col gap-[0.5px] items-start">
-                <span>{t("hero.appleStoreBtnTextPt1")}</span>
+                <span>{t("common.appleStoreBtnTextPt1")}</span>
                 <span className="font-semibold">
-                  {t("hero.appleStoreBtnTextPt2")}
+                  {t("common.appleStoreBtnTextPt2")}
                 </span>
               </p>
             </button>
@@ -189,9 +189,9 @@ const HeroSlide = ({ slideNo, setOpen }) => {
                 className="w-[30px] h-[30px] md:w-[33px] md:h-[33px]"
               />
               <p className="flex flex-col gap-[0.5px] items-start">
-                <span>{t("hero.googlePlayBtnTextPt1")}</span>
+                <span>{t("common.googlePlayBtnTextPt1")}</span>
                 <span className="font-semibold">
-                  {t("hero.googlePlayBtnTextPt2")}
+                  {t("common.googlePlayBtnTextPt2")}
                 </span>
               </p>
             </button>
@@ -205,9 +205,9 @@ const HeroSlide = ({ slideNo, setOpen }) => {
                 className="w-[30px] h-[30px] md:w-[33px] md:h-[33px]"
               />
               <p className="flex flex-col gap-[0.5px] items-start">
-                <span>{t("hero.appleStoreBtnTextPt1")}</span>
+                <span>{t("common.appleStoreBtnTextPt1")}</span>
                 <span className="font-semibold">
-                  {t("hero.appleStoreBtnTextPt2")}
+                  {t("common.appleStoreBtnTextPt2")}
                 </span>
               </p>
             </button>

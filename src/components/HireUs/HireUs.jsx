@@ -1,10 +1,12 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import HireUsImg from "../../assets/images/hireUs.png";
+import { useContextValue } from "../../context/StateProvider";
 
 export const HireUs = () => {
   const [formMode, setFormMode] = useState("individual");
   const [carVehicleType, setCarVehicleType] = useState("");
+  const { t, lang } = useContextValue();
 
   return (
     <section id="hire-us">
@@ -24,17 +26,11 @@ export const HireUs = () => {
                 style={{ fontWeight: 600 }}
                 className="mb-6 mt-12 md:mt-0 md:mb-[0.5rem]"
               >
-                Hire Us
+                {t("hireUs.heading")}
               </h1>
               {/* hire us info.  */}
               <p className="mb-6" style={{ fontWeight: 600 }}>
-                Whether you are individual customer, female car owner or
-                commercial user now no need to get panic if you are in hurry for
-                a party, busy in a corporate meeting or stuck in fast moving
-                daily routine life, Mr. steamer is just one tap away to take
-                care of your Vehicle. Weather its Car wash, Car detailing, Oil
-                Change, Tyre Replacement, Road side assistance or Car toe
-                service we are 24/7 Available to serve you.
+                {t("hireUs.description")}
               </p>
               {/* button tabs  */}
               <div
@@ -43,6 +39,8 @@ export const HireUs = () => {
               >
                 <button
                   className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
+                    lang === "ar" ? "flex-[0.5]" : ""
+                  } ${
                     formMode === "individual" ? "text-white" : "text-[#666]"
                   }`}
                   style={{
@@ -55,13 +53,15 @@ export const HireUs = () => {
                   }}
                   onClick={() => setFormMode("individual")}
                 >
-                  <span>Service for</span>
-                  <span style={{ fontWeight: 600 }}>Individual Customer</span>
+                  <span>{t("common.serviceForButtonHeading")}</span>
+                  <span style={{ fontWeight: 600 }}>
+                    {t("common.indCustomerButtonText")}
+                  </span>
                 </button>
                 <button
                   className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
-                    formMode === "company" ? "text-white" : "text-[#666]"
-                  }`}
+                    lang === "ar" ? "flex-[0.5]" : ""
+                  } ${formMode === "company" ? "text-white" : "text-[#666]"}`}
                   style={{
                     borderRadius: "10px",
                     background: `${
@@ -72,15 +72,17 @@ export const HireUs = () => {
                   }}
                   onClick={() => setFormMode("company")}
                 >
-                  <span>Service for</span>
-                  <span style={{ fontWeight: 600 }}>Corporate Sector</span>
+                  <span>{t("common.serviceForButtonHeading")}</span>
+                  <span style={{ fontWeight: 600 }}>
+                    {t("common.corpCustomerButtonText")}
+                  </span>
                 </button>
               </div>
               {/* form to fill  */}
               <div className="bg-[#F1F1F1] md:w-[300px] flex flex-col gap-5 px-8 py-4 mt-6 rounded-md">
                 <div className="flex flex-col gap-1">
                   <label htmlFor="phone" className="text-sm">
-                    Vehicle Type
+                    {t("hireUs.formLabel")}
                   </label>
                   <select
                     id="dropdown"
@@ -91,30 +93,20 @@ export const HireUs = () => {
                   >
                     {formMode === "individual" ? (
                       <>
-                        <option value="sedan">
-                          Sedan,coupe,sport,mini or similar
+                        <option value="sedan">{t("hireUs.formOption1")}</option>
+                        <option value="suv5">{t("hireUs.formOption2")}</option>
+                        <option value="suv7">{t("hireUs.formOption3")}</option>
+                        <option value="motorbikes">
+                          {t("hireUs.formOption4")}
                         </option>
-                        <option value="suv5">
-                          SUV 5 Seater, Short pickups or similar
-                        </option>
-                        <option value="suv7">
-                          SUV 7 Seater, Long Pickup or smilar
-                        </option>
-                        <option value="motorbikes">Motorbikes</option>
-                        <option value="vans">Vans</option>
+                        <option value="vans">{t("hireUs.formOption5")}</option>
                       </>
                     ) : (
                       <>
-                        <option value="sedan">
-                          Sedan,coupe,sport,mini or similar
-                        </option>
-                        <option value="suv5">
-                          SUV 5 Seater, Short pickups or similar
-                        </option>
-                        <option value="suv7">
-                          SUV 7 Seater, Long Pickup or smilar
-                        </option>
-                        <option value="vans">Vans</option>
+                        <option value="sedan">{t("hireUs.formOption1")}</option>
+                        <option value="suv5">{t("hireUs.formOption2")}</option>
+                        <option value="suv7">{t("hireUs.formOption3")}</option>
+                        <option value="vans">{t("hireUs.formOption5")}</option>
                       </>
                     )}
                   </select>
@@ -134,7 +126,7 @@ export const HireUs = () => {
                       "linear-gradient(131deg, #000 0%, #2C4694 100%)",
                   }}
                 >
-                  Book Now
+                  {t("hireUs.bookNowBtnText")}
                 </button>
               </div>
             </div>
@@ -153,25 +145,21 @@ export const HireUs = () => {
                 style={{ fontWeight: 600 }}
                 className="mt-4 mb-3 md:mb-[3rem]"
               >
-                Hire Us
+                {t("hireUs.heading")}
               </h1>
               {/* hire us info.  */}
               <p style={{ fontWeight: 600, marginBottom: "1rem" }}>
-                Whether you are individual customer, female car owner or
-                commercial user now no need to get panic if you are in hurry for
-                a party, busy in a corporate meeting or stuck in fast moving
-                daily routine life, Mr. steamer is just one tap away to take
-                care of your Vehicle. Weather its Car wash, Car detailing, Oil
-                Change, Tyre Replacement, Road side assistance or Car toe
-                service we are 24/7 Available to serve you.
+                {t("hireUs.description")}
               </p>
               {/* button tabs  */}
               <div
-                className="bg-[#F1F1F1] flex gap-2 px-8 py-4 rounded-md"
+                className="bg-[#F1F1F1] flex gap-2 px-8 py-4 rounded-md justify-center"
                 style={{ width: "340px" }}
               >
                 <button
                   className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
+                    lang === "ar" ? "flex-[0.5]" : ""
+                  } ${
                     formMode === "individual" ? "text-white" : "text-[#666]"
                   }`}
                   style={{
@@ -184,13 +172,15 @@ export const HireUs = () => {
                   }}
                   onClick={() => setFormMode("individual")}
                 >
-                  <span>Service for</span>
-                  <span style={{ fontWeight: 600 }}>Individual Customer</span>
+                  <span>{t("common.serviceForButtonHeading")}</span>
+                  <span style={{ fontWeight: 600 }}>
+                    {t("common.indCustomerButtonText")}
+                  </span>
                 </button>
                 <button
                   className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
-                    formMode === "company" ? "text-white" : "text-[#666]"
-                  }`}
+                    lang === "ar" ? "flex-[0.5]" : ""
+                  } ${formMode === "company" ? "text-white" : "text-[#666]"}`}
                   style={{
                     borderRadius: "10px",
                     background: `${
@@ -201,15 +191,17 @@ export const HireUs = () => {
                   }}
                   onClick={() => setFormMode("company")}
                 >
-                  <span>Service for</span>
-                  <span style={{ fontWeight: 600 }}>Corporate Sector</span>
+                  <span>{t("common.serviceForButtonHeading")}</span>
+                  <span style={{ fontWeight: 600 }}>
+                    {t("common.corpCustomerButtonText")}
+                  </span>
                 </button>
               </div>
               {/* form to fill  */}
               <div className="bg-[#F1F1F1] md:w-[300px] flex flex-col gap-5 px-8 py-4 mt-6 rounded-md">
                 <div className="flex flex-col gap-1">
                   <label htmlFor="phone" className="text-sm">
-                    Vehicle Type
+                    {t("hireUs.formLabel")}
                   </label>
                   <select
                     id="dropdown"
@@ -220,30 +212,20 @@ export const HireUs = () => {
                   >
                     {formMode === "individual" ? (
                       <>
-                        <option value="sedan">
-                          Sedan,coupe,sport,mini or similar
+                        <option value="sedan">{t("hireUs.formOption1")}</option>
+                        <option value="suv5">{t("hireUs.formOption2")}</option>
+                        <option value="suv7">{t("hireUs.formOption3")}</option>
+                        <option value="motorbikes">
+                          {t("hireUs.formOption4")}
                         </option>
-                        <option value="suv5">
-                          SUV 5 Seater, Short pickups or similar
-                        </option>
-                        <option value="suv7">
-                          SUV 7 Seater, Long Pickup or smilar
-                        </option>
-                        <option value="motorbikes">Motorbikes</option>
-                        <option value="vans">Vans</option>
+                        <option value="vans">{t("hireUs.formOption5")}</option>
                       </>
                     ) : (
                       <>
-                        <option value="sedan">
-                          Sedan,coupe,sport,mini or similar
-                        </option>
-                        <option value="suv5">
-                          SUV 5 Seater, Short pickups or similar
-                        </option>
-                        <option value="suv7">
-                          SUV 7 Seater, Long Pickup or smilar
-                        </option>
-                        <option value="vans">Vans</option>
+                        <option value="sedan">{t("hireUs.formOption1")}</option>
+                        <option value="suv5">{t("hireUs.formOption2")}</option>
+                        <option value="suv7">{t("hireUs.formOption3")}</option>
+                        <option value="vans">{t("hireUs.formOption5")}</option>
                       </>
                     )}
                   </select>
@@ -263,7 +245,7 @@ export const HireUs = () => {
                       "linear-gradient(131deg, #000 0%, #2C4694 100%)",
                   }}
                 >
-                  Book Now
+                  {t("hireUs.bookNowBtnText")}
                 </button>
               </div>
             </div>

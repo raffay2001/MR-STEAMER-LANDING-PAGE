@@ -1,8 +1,10 @@
 import React from "react";
 import WhyUsImage from "../../assets/images/whyUs.png";
 import { Grid } from "@mui/material";
+import { useContextValue } from "../../context/StateProvider";
 
 export const WhyUs = () => {
+  const { t } = useContextValue();
   return (
     <section id="about">
       <div className="px-6 md:px-12 pt-24 md:pt-32 pb-8">
@@ -18,7 +20,9 @@ export const WhyUs = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <div>
-              <h1 style={{ fontWeight: 600, marginBottom: "1rem" }}>Why Us</h1>
+              <h1 style={{ fontWeight: 600, marginBottom: "1rem" }}>
+                {t("whyUs.heading")}
+              </h1>
               <p
                 style={{
                   color: "rgba(0, 0, 0, 0.50)",
@@ -26,15 +30,7 @@ export const WhyUs = () => {
                   lineHeight: "34px",
                 }}
               >
-                Now you are just one tap away from an ecofriendly steam car
-                wash. No matter where you are, just book your Mr. Steamer and
-                enjoy the perk of premium car washing without any interruption
-                in your house hold chores or office work. Our company employs
-                only highly qualified specialists, we use high-quality cleaning
-                products and equipment, as well as premium materials. Our
-                company employs only highly skilled personals, we use
-                high-quality cleaning products and equipment, as well as premium
-                materials.
+                {t("whyUs.description")}
               </p>
               <div className="mt-8">
                 <button
@@ -45,7 +41,7 @@ export const WhyUs = () => {
                       "linear-gradient(131deg, #000 0%, #2C4694 100%)",
                   }}
                 >
-                  Contact Us
+                  {t("whyUs.buttonText")}
                 </button>
               </div>
             </div>

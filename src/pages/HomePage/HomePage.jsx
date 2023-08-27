@@ -126,12 +126,12 @@ const HomePage = () => {
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-1">
                 <label htmlFor="name" className="text-sm">
-                  {t("modal.formNameField")}
+                  {t("common.formNameField")}
                 </label>
                 <input
                   type="text"
                   id="name"
-                  placeholder={t("modal.formNameFieldPlaceholder")}
+                  placeholder={t("common.formNameFieldPlaceholder")}
                   className="p-2 border border-solid border-[#D2D7DE] transition-colors duration-300 rounded-md focus:border-gray-400 focus:outline-none"
                   value={name}
                   onChange={handleNameChange}
@@ -139,12 +139,12 @@ const HomePage = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <label htmlFor="phone" className="text-sm">
-                  {t("modal.formNumberField")}
+                  {t("common.formNumberField")}
                 </label>
                 <input
                   type="text"
                   id="phone"
-                  placeholder={t("modal.formNumberFieldPlaceholder")}
+                  placeholder={t("common.formNumberFieldPlaceholder")}
                   className="p-2 border border-solid border-[#D2D7DE] transition-colors duration-300 rounded-md focus:border-gray-400 focus:outline-none"
                   value={phone}
                   onChange={handlePhoneChange}
@@ -152,12 +152,12 @@ const HomePage = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <label htmlFor="email" className="text-sm">
-                  {t("modal.formEmailField")}
+                  {t("common.formEmailField")}
                 </label>
                 <input
                   type="text"
                   id="email"
-                  placeholder={t("modal.formEmailFieldPlaceholder")}
+                  placeholder={t("common.formEmailFieldPlaceholder")}
                   className="p-2 border border-solid border-[#D2D7DE] transition-colors duration-300 rounded-md focus:border-gray-400 focus:outline-none"
                   value={email}
                   onChange={handleEmailChange}
@@ -165,7 +165,7 @@ const HomePage = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <label htmlFor="city" className="text-sm">
-                  {t("modal.formCityField.heading")}
+                  {t("common.formCityField.heading")}
                 </label>
                 <select
                   id="city"
@@ -173,10 +173,10 @@ const HomePage = () => {
                   value={city}
                   onChange={handleCityChange}
                 >
-                  <option>{t("modal.formCityField.select")}</option>
+                  <option>{t("common.formCityField.select")}</option>
                   {SUADIA_CITIES.map((city) => (
                     <option key={city}>
-                      {t(`modal.formCityField.cities.${city}`)}
+                      {t(`common.formCityField.cities.${city}`)}
                     </option>
                   ))}
                 </select>

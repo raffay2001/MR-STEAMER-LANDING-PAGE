@@ -57,6 +57,7 @@ export const FEATURES = [
 
 export const SERVICES = [
   {
+    key: "carDetailing",
     title: "Car Detailing",
     description: `
       Mr. Steamer will make sure to
@@ -70,6 +71,7 @@ export const SERVICES = [
     icon: service1,
   },
   {
+    key: "tyreReplacement",
     title: "Tyre Replacement",
     description: `Let us know the details and
       we will take care of it at your
@@ -77,6 +79,7 @@ export const SERVICES = [
     icon: service2,
   },
   {
+    key: "oilChange",
     title: "Oil Change",
     description: `Not just wash we are here to
       take care your to provide
@@ -84,6 +87,7 @@ export const SERVICES = [
     icon: service3,
   },
   {
+    key: "carWash",
     title: "Car wash",
     description: `Now no need to go anywhere
     Order Mr. Steamer A at your
@@ -93,15 +97,17 @@ export const SERVICES = [
     icon: service2,
   },
   {
+    key: "roadSideAssistance",
     title: "Road Side Assistance",
     description: `Need help! Mr. Steamer will
     make sure to save your day.`,
     icon: service4,
   },
   {
+    key: "carToeService",
     title: "Car Toe Service",
     description: `Now Just open your Mobile
-    order `,
+    order`,
     icon: service5,
   },
 ];
