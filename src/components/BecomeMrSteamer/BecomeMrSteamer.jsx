@@ -5,7 +5,7 @@ import { JOB_TYPES, SUADIA_CITIES } from "../../utils/constants";
 import { useContextValue } from "../../context/StateProvider";
 
 export const BecomeMrSteamer = () => {
-  const [formMode, setFormMode] = useState("individual");
+  const [formMode, setFormMode] = useState("permanent");
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
@@ -22,46 +22,63 @@ export const BecomeMrSteamer = () => {
               {t("becomeMrSteamer.heading")}
             </h1>
             {/* button tabs  */}
-            <div
-              className="bg-[#F1F1F1] flex gap-2 px-8 py-4 rounded-md"
-              style={{ width: "340px" }}
-            >
+            <div className="bg-[#F1F1F1] flex gap-2 px-8 py-4 rounded-md w-[370px] md:w-[450px]">
               <button
-                className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
+                className={`border-none flex flex-col py-2 px-4 cursor-pointer justify-center items-center ${
                   lang === "ar" ? "flex-[0.5]" : ""
-                } ${formMode === "individual" ? "text-white" : "text-[#666]"}`}
+                } ${formMode === "permanent" ? "text-white" : "text-[#666]"}`}
                 style={{
                   borderRadius: "10px",
                   background: `${
-                    formMode === "individual"
+                    formMode === "permanent"
                       ? "linear-gradient(131deg, #000 0%, #2C4694 100%)"
                       : "white"
                   }`,
                 }}
-                onClick={() => setFormMode("individual")}
+                onClick={() => setFormMode("permanent")}
               >
-                <span>{t("common.serviceForButtonHeading")}</span>
                 <span style={{ fontWeight: 600 }}>
-                  {t("common.indCustomerButtonText")}
+                  {t("becomeMrSteamer.permanentEmployeeText")}
                 </span>
               </button>
               <button
-                className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
+                className={`border-none flex flex-col py-2 px-4 cursor-pointer justify-center items-center ${
                   lang === "ar" ? "flex-[0.5]" : ""
-                } ${formMode === "company" ? "text-white" : "text-[#666]"}`}
+                } ${formMode === "partTime" ? "text-white" : "text-[#666]"}`}
                 style={{
                   borderRadius: "10px",
                   background: `${
-                    formMode === "company"
+                    formMode === "partTime"
                       ? "linear-gradient(131deg, #000 0%, #2C4694 100%)"
                       : "white"
                   }`,
                 }}
-                onClick={() => setFormMode("company")}
+                onClick={() => setFormMode("partTime")}
               >
-                <span>{t("common.serviceForButtonHeading")}</span>
                 <span style={{ fontWeight: 600 }}>
-                  {t("common.corpCustomerButtonText")}
+                  {t("becomeMrSteamer.partTimeEmployeeText")}
+                </span>
+              </button>
+              <button
+                className={`border-none flex flex-col py-2 px-4 cursor-pointer justify-center items-center ${
+                  lang === "ar" ? "flex-[0.5]" : ""
+                } ${
+                  formMode === "earnWithYourVehicles"
+                    ? "text-white"
+                    : "text-[#666]"
+                }`}
+                style={{
+                  borderRadius: "10px",
+                  background: `${
+                    formMode === "earnWithYourVehicles"
+                      ? "linear-gradient(131deg, #000 0%, #2C4694 100%)"
+                      : "white"
+                  }`,
+                }}
+                onClick={() => setFormMode("earnWithYourVehicles")}
+              >
+                <span style={{ fontWeight: 600 }}>
+                  {t("becomeMrSteamer.earnWithYourVehiclesText")}
                 </span>
               </button>
             </div>

@@ -138,7 +138,10 @@
         "earnWithYourVehicles": "Earn With Your Vehicles"
       }
     },
-    "registerButtonText": "Register"
+    "registerButtonText": "Register",
+    "permanentEmployeeText": "Permanent Employee",
+    "partTimeEmployeeText": "Part Time Employee",
+    "earnWithYourVehiclesText": "Earn With Your Vehicles"
   },
   "becomeMember": {
     "heading": "Choose Plan",

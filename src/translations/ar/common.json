@@ -138,7 +138,10 @@
         "earnWithYourVehicles": "اكسب مع المركبات الخاصة بك"
       }
     },
-    "registerButtonText": "يسجل"
+    "registerButtonText": "يسجل",
+    "permanentEmployeeText": "موظف دائم",
+    "partTimeEmployeeText": "موظف بدوام جزئي",
+    "earnWithYourVehiclesText": "اكسب مع المركبات الخاصة بك"
   },
   "becomeMember": {
     "heading": "اختر الخطة",
