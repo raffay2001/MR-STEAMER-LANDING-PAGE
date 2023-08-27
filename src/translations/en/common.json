@@ -1,5 +1,12 @@
 {
   "header": {
-    "logoTitle": "Steam it Clean it"
+    "logoTitle": "Steam it Clean it",
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "contactUs": "Contact Us",
+    "hireUs": "Hire Us",
+    "login": "Login",
+    "signup": "Sign Up"
   }
 }

@@ -210,7 +210,7 @@ const HeroSlide = ({ slideNo, setOpen }) => {
 
 export const Hero = ({ setOpen }) => {
   return (
-    <section id="home relative">
+    <section id="home" className="relative">
       <div className="pt-8 md:pt-12">
         <CarouselX setOpen={setOpen} />
       </div>

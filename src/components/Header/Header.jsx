@@ -3,7 +3,6 @@ import Logo from "../../assets/images/logo.png";
 import Logo1 from "../../assets/images/logo1.png";
 import { CSSTransition } from "react-transition-group";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 import { IconButton } from "@mui/material";
 import { useContextValue } from "../../context/StateProvider";
 
@@ -88,7 +87,7 @@ export const Header = (props) => {
                   href="#home"
                   onClick={(e) => handleSectionClick(e, "home")}
                 >
-                  Home
+                  {t("header.home")}
                 </a>
               </li>
               <li
@@ -103,7 +102,7 @@ export const Header = (props) => {
                   href="#services"
                   onClick={(e) => handleSectionClick(e, "services")}
                 >
-                  Services
+                  {t("header.services")}
                 </a>
               </li>
               <li
@@ -118,7 +117,7 @@ export const Header = (props) => {
                   href="#about"
                   onClick={(e) => handleSectionClick(e, "about")}
                 >
-                  About
+                  {t("header.about")}
                 </a>
               </li>
               <li
@@ -133,7 +132,7 @@ export const Header = (props) => {
                   href="#contact"
                   onClick={(e) => handleSectionClick(e, "contact")}
                 >
-                  Contact Us
+                  {t("header.contactUs")}
                 </a>
               </li>
               <li
@@ -148,7 +147,7 @@ export const Header = (props) => {
                   href="#hire-us"
                   onClick={(e) => handleSectionClick(e, "hireUs")}
                 >
-                  Hire Us
+                  {t("header.hireUs")}
                 </a>
               </li>
             </ul>
@@ -159,7 +158,7 @@ export const Header = (props) => {
                   href="#login"
                   onClick={handleSectionClick}
                 >
-                  Login
+                  {t("header.login")}
                 </a>
               </div>
               <div className="w-[0.1px] bg-gray-500"></div>
@@ -169,7 +168,7 @@ export const Header = (props) => {
                   href="#signup"
                   onClick={handleSectionClick}
                 >
-                  Signup
+                  {t("header.signup")}
                 </a>
               </div>
             </div>
@@ -280,7 +279,7 @@ export const Header = (props) => {
                     <img src={Logo} alt="logo_0" className="w-[80px]" />
                   </a>
                   <div className="text-sm border-x-0 border-y-[0.1px] border-solid border-gray-500">
-                    Steam it Clean it
+                    {t("header.logoTitle")}
                   </div>
                 </div>
               </div>
@@ -313,7 +312,7 @@ export const Header = (props) => {
                   href="#home"
                   onClick={(e) => handleSectionClick(e, "home")}
                 >
-                  Home
+                  {t("header.home")}
                 </a>
                 <a
                   className={`no-underline text-white px-0 py-1 ${
@@ -324,7 +323,7 @@ export const Header = (props) => {
                   href="#services"
                   onClick={(e) => handleSectionClick(e, "services")}
                 >
-                  Services
+                  {t("header.services")}
                 </a>
                 <a
                   className={`no-underline text-white px-0 py-1 ${
@@ -335,7 +334,7 @@ export const Header = (props) => {
                   href="#about"
                   onClick={(e) => handleSectionClick(e, "about")}
                 >
-                  About Us
+                  {t("header.about")}
                 </a>
                 <a
                   className={`no-underline text-white px-0 py-1 ${
@@ -346,7 +345,7 @@ export const Header = (props) => {
                   href="#contact"
                   onClick={(e) => handleSectionClick(e, "contact")}
                 >
-                  Contact Us
+                  {t("header.contactUs")}
                 </a>
                 <a
                   className={`no-underline text-white px-0 py-1 ${
@@ -357,7 +356,7 @@ export const Header = (props) => {
                   href="#hire-us"
                   onClick={(e) => handleSectionClick(e, "hireUs")}
                 >
-                  Hire Us
+                  {t("header.hireUs")}
                 </a>
               </div>
               <div className="flex flex-col gap-2">
@@ -370,7 +369,7 @@ export const Header = (props) => {
                   href="#login"
                   onClick={(e) => handleSectionClick(e, "login")}
                 >
-                  Login
+                  {t("header.login")}
                 </a>
                 <a
                   className={`no-underline text-[#ffffff80] px-0 py-1 ${
@@ -381,7 +380,7 @@ export const Header = (props) => {
                   href="#signup"
                   onClick={(e) => handleSectionClick(e, "signup")}
                 >
-                  Signup
+                  {t("header.signup")}
                 </a>
               </div>
               <div className="flex flex-col gap-2">
@@ -390,6 +389,7 @@ export const Header = (props) => {
                   onClick={() => {
                     i18n.changeLanguage("en");
                     setLang("en");
+                    localStorage.setItem("lang", "en");
                     closeMenu();
                   }}
                 >
@@ -400,6 +400,7 @@ export const Header = (props) => {
                   onClick={() => {
                     i18n.changeLanguage("ar");
                     setLang("ar");
+                    localStorage.setItem("lang", "ar");
                     closeMenu();
                   }}
                 >
