@@ -1,4 +1,32 @@
 {
+  "modal": {
+    "heading": "أرسل للإخطار",
+    "text": ".نحن قاب قوسين أو أدنى. املأ التفاصيل للحصول على الإخطار",
+    "formNameField": "اسم",
+    "formNumberField": "رقم الهاتف المحمول",
+    "formEmailField": "بريد إلكتروني",
+    "formNameFieldPlaceholder": "أدخل الاسم الكامل",
+    "formNumberFieldPlaceholder": "أدخل رقم الجوال",
+    "formEmailFieldPlaceholder": "أدخل عنوان البريد الالكتروني",
+    "formCityField": {
+      "heading": "مدينة",
+      "select": "يختار",
+      "cities": {
+        "Riyadh": "الرياض",
+        "Jeddah": "جدة",
+        "Mecca": "مكة المكرمة",
+        "Medina": "المدينة المنورة",
+        "Dammam": "الدمام",
+        "Taif": "الطائف",
+        "Tabuk": "تبوك",
+        "Buraydah": "بريدة",
+        "Abha": "أبها",
+        "Khobar": "مدينه الخبر",
+        "Jubail": "الجبيل"
+      }
+    },
+    "buttonText": "أعلمني"
+  },
   "header": {
     "logoTitle": "قم بتنظيفه بالبخار",
     "home": "بيت",
@@ -8,5 +36,42 @@
     "hireUs": "استئجار لنا",
     "login": "تسجيل الدخول",
     "signup": "اشتراك"
+  },
+  "hero": {
+    "headingPartOne": "الآن أصبح غسيل السيارات بالبخار عند باب منزلك",
+    "headingPartTwo": ".بنقرة واحدة فقط بعيدا.",
+    "googlePlayBtnTextPt1": "احصل عليه",
+    "googlePlayBtnTextPt2": "تطبيقات جوجل",
+    "appleStoreBtnTextPt1": "تحميل على",
+    "appleStoreBtnTextPt2": "متجر آبل"
+  },
+  "features": {
+    "heading": "مميزاتنا",
+    "featureList": {
+      "ecoFriendly": {
+        "title": "صديقة للبيئة",
+        "description": "نحن نستخدم مواد ومعدات تنظيف عالية الجودة بالإضافة إلى مواد متميزة."
+      },
+      "waterConservative": {
+        "title": "المحافظة على المياه",
+        "description": "نحن نستخدم مواد ومعدات تنظيف عالية الجودة بالإضافة إلى مواد متميزة."
+      },
+      "timeSaving": {
+        "title": "توفير الوقت",
+        "description": "نحن نستخدم مواد ومعدات تنظيف عالية الجودة بالإضافة إلى مواد متميزة."
+      },
+      "hassleFree": {
+        "title": "خالية من المتاعب",
+        "description": "نحن نستخدم مواد ومعدات تنظيف عالية الجودة بالإضافة إلى مواد متميزة."
+      },
+      "userFriendly": {
+        "title": "سهل الاستخدام",
+        "description": "نحن نستخدم مواد ومعدات تنظيف عالية الجودة بالإضافة إلى مواد متميزة."
+      },
+      "availability": {
+        "title": "توافر 24/7",
+        "description": "نحن نستخدم مواد ومعدات تنظيف عالية الجودة بالإضافة إلى مواد متميزة."
+      }
+    }
   }
 }

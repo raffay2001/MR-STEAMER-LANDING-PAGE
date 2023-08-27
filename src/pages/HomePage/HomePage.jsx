@@ -16,6 +16,7 @@ import { Box, Modal } from "@mui/material";
 import { SUADIA_CITIES } from "../../utils/constants";
 import CloseIcon from "../../assets/images/closeIcon.png";
 import { toast } from "react-hot-toast";
+import { useContextValue } from "../../context/StateProvider";
 
 const style = {
   position: "fixed",
@@ -35,6 +36,7 @@ const topCenterStyle = {
 };
 
 const HomePage = () => {
+  const { t } = useContextValue();
   const [open, setOpen] = useState(false);
   const handleClose = () => {
     clearState();
@@ -107,10 +109,9 @@ const HomePage = () => {
           <div className="w-full h-full flex flex-col gap-4">
             <div className="w-full flex justify-end">
               <div>
-                <p style={{ fontWeight: 600 }}>Submit to Notify</p>
+                <p style={{ fontWeight: 600 }}>{t("modal.heading")}</p>
                 <p style={{ color: "rgba(0, 0, 0, 0.50)", fontSize: "14px" }}>
-                  We are just around the corner. fill the details to get the
-                  notify.
+                  {t("modal.text")}
                 </p>
               </div>
               <div>
@@ -125,12 +126,12 @@ const HomePage = () => {
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-1">
                 <label htmlFor="name" className="text-sm">
-                  Name
+                  {t("modal.formNameField")}
                 </label>
                 <input
                   type="text"
                   id="name"
-                  placeholder="Enter Full Name"
+                  placeholder={t("modal.formNameFieldPlaceholder")}
                   className="p-2 border border-solid border-[#D2D7DE] transition-colors duration-300 rounded-md focus:border-gray-400 focus:outline-none"
                   value={name}
                   onChange={handleNameChange}
@@ -138,12 +139,12 @@ const HomePage = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <label htmlFor="phone" className="text-sm">
-                  Mobile Number
+                  {t("modal.formNumberField")}
                 </label>
                 <input
                   type="text"
                   id="phone"
-                  placeholder="Enter Mobile Number"
+                  placeholder={t("modal.formNumberFieldPlaceholder")}
                   className="p-2 border border-solid border-[#D2D7DE] transition-colors duration-300 rounded-md focus:border-gray-400 focus:outline-none"
                   value={phone}
                   onChange={handlePhoneChange}
@@ -151,12 +152,12 @@ const HomePage = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <label htmlFor="email" className="text-sm">
-                  Email
+                  {t("modal.formEmailField")}
                 </label>
                 <input
                   type="text"
                   id="email"
-                  placeholder="Enter Email Address"
+                  placeholder={t("modal.formEmailFieldPlaceholder")}
                   className="p-2 border border-solid border-[#D2D7DE] transition-colors duration-300 rounded-md focus:border-gray-400 focus:outline-none"
                   value={email}
                   onChange={handleEmailChange}
@@ -164,7 +165,7 @@ const HomePage = () => {
               </div>
               <div className="flex flex-col gap-1">
                 <label htmlFor="city" className="text-sm">
-                  City
+                  {t("modal.formCityField.heading")}
                 </label>
                 <select
                   id="city"
@@ -172,9 +173,11 @@ const HomePage = () => {
                   value={city}
                   onChange={handleCityChange}
                 >
-                  <option>Select</option>
+                  <option>{t("modal.formCityField.select")}</option>
                   {SUADIA_CITIES.map((city) => (
-                    <option key={city}>{city}</option>
+                    <option key={city}>
+                      {t(`modal.formCityField.cities.${city}`)}
+                    </option>
                   ))}
                 </select>
               </div>
@@ -189,7 +192,7 @@ const HomePage = () => {
                   }}
                   onClick={formHandler}
                 >
-                  Notify Me
+                  {t("modal.buttonText")}
                 </button>
               </div>
             </div>

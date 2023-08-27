@@ -1,4 +1,32 @@
 {
+  "modal": {
+    "heading": "Submit to Notify",
+    "text": "We are just around the corner. fill the details to get the notify.",
+    "formNameField": "Name",
+    "formNumberField": "Mobile Number",
+    "formEmailField": "Email",
+    "formNameFieldPlaceholder": "Enter Full Name",
+    "formNumberFieldPlaceholder": "Enter Mobile Number",
+    "formEmailFieldPlaceholder": "Enter Email Address",
+    "formCityField": {
+      "heading": "City",
+      "select": "Select",
+      "cities": {
+        "Riyadh": "Riyadh",
+        "Jeddah": "Jeddah",
+        "Mecca": "Mecca",
+        "Medina": "Medina",
+        "Dammam": "Dammam",
+        "Taif": "Taif",
+        "Tabuk": "Tabuk",
+        "Buraydah": "Buraydah",
+        "Abha": "Abha",
+        "Khobar": "Khobar",
+        "Jubail": "Jubail"
+      }
+    },
+    "buttonText": "Notify Me"
+  },
   "header": {
     "logoTitle": "Steam it Clean it",
     "home": "Home",
@@ -8,5 +36,42 @@
     "hireUs": "Hire Us",
     "login": "Login",
     "signup": "Sign Up"
+  },
+  "hero": {
+    "headingPartOne": "Now steam car wash at your door step is",
+    "headingPartTwo": "just one tap away.",
+    "googlePlayBtnTextPt1": "Get it on",
+    "googlePlayBtnTextPt2": "Google Play",
+    "appleStoreBtnTextPt1": "Download on the",
+    "appleStoreBtnTextPt2": "Apple Store"
+  },
+  "features": {
+    "heading": "Our Features",
+    "featureList": {
+      "ecoFriendly": {
+        "title": "Eco Friendly",
+        "description": "We use high-quality cleaning agents and equipment as well as premium materials."
+      },
+      "waterConservative": {
+        "title": "Water Conservative",
+        "description": "We use high-quality cleaning agents and equipment as well as premium materials."
+      },
+      "timeSaving": {
+        "title": "Time Saving",
+        "description": "We use high-quality cleaning agents and equipment as well as premium materials."
+      },
+      "hassleFree": {
+        "title": "Hassle Free",
+        "description": "We use high-quality cleaning agents and equipment as well as premium materials."
+      },
+      "userFriendly": {
+        "title": "User Friendly",
+        "description": "We use high-quality cleaning agents and equipment as well as premium materials."
+      },
+      "availability": {
+        "title": "24/7 Availability",
+        "description": "We use high-quality cleaning agents and equipment as well as premium materials."
+      }
+    }
   }
 }

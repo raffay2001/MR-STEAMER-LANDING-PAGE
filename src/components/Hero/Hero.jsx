@@ -8,9 +8,11 @@ import { Grid } from "@mui/material";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useContextValue } from "../../context/StateProvider";
 
 const HeroSlide = ({ slideNo, setOpen }) => {
   const handleOpen = () => setOpen(true);
+  const { t } = useContextValue();
   return (
     <Grid
       container
@@ -131,8 +133,8 @@ const HeroSlide = ({ slideNo, setOpen }) => {
         </div>
         <div className="hidden w-full md:flex flex-col gap-8 items-start">
           <p className="text-[#2A2D32] text-[40px] leading-[60px] md:text-[68px] md:leading-[90px]">
-            Now steam car wash at your door step is{" "}
-            <span className="font-bold">just one tap away.</span>
+            {t("hero.headingPartOne")}{" "}
+            <span className="font-bold">{t("hero.headingPartTwo")}</span>
           </p>
           <div className="flex flex-col gap-2 md:flex-row">
             <button
@@ -145,8 +147,10 @@ const HeroSlide = ({ slideNo, setOpen }) => {
                 className="w-[30px] h-[30px] md:w-[33px] md:h-[33px]"
               />
               <p className="flex flex-col gap-[0.5px] items-start">
-                <span>Get it on</span>
-                <span className="font-semibold">Google Play</span>
+                <span>{t("hero.googlePlayBtnTextPt1")}</span>
+                <span className="font-semibold">
+                  {t("hero.googlePlayBtnTextPt2")}
+                </span>
               </p>
             </button>
             <button
@@ -159,8 +163,10 @@ const HeroSlide = ({ slideNo, setOpen }) => {
                 className="w-[30px] h-[30px] md:w-[33px] md:h-[33px]"
               />
               <p className="flex flex-col gap-[0.5px] items-start">
-                <span>Download on the</span>
-                <span className="font-semibold">Apple Store</span>
+                <span>{t("hero.appleStoreBtnTextPt1")}</span>
+                <span className="font-semibold">
+                  {t("hero.appleStoreBtnTextPt2")}
+                </span>
               </p>
             </button>
           </div>
@@ -169,8 +175,8 @@ const HeroSlide = ({ slideNo, setOpen }) => {
       <Grid item xs={12} md={6}>
         <div className="flex w-full md:hidden flex-col gap-8 items-center">
           <p className="text-[#2A2D32] text-[40px] leading-[60px] md:text-[68px] md:leading-[90px] text-center">
-            Now steam car wash at your door step is{" "}
-            <span className="font-bold">just one tap away.</span>
+            {t("hero.headingPartOne")}{" "}
+            <span className="font-bold">{t("hero.headingPartTwo")}</span>
           </p>
           <div className="flex flex-col gap-4 md:flex-row">
             <button
@@ -183,8 +189,10 @@ const HeroSlide = ({ slideNo, setOpen }) => {
                 className="w-[30px] h-[30px] md:w-[33px] md:h-[33px]"
               />
               <p className="flex flex-col gap-[0.5px] items-start">
-                <span>Get it on</span>
-                <span className="font-semibold">Google Play</span>
+                <span>{t("hero.googlePlayBtnTextPt1")}</span>
+                <span className="font-semibold">
+                  {t("hero.googlePlayBtnTextPt2")}
+                </span>
               </p>
             </button>
             <button
@@ -197,8 +205,10 @@ const HeroSlide = ({ slideNo, setOpen }) => {
                 className="w-[30px] h-[30px] md:w-[33px] md:h-[33px]"
               />
               <p className="flex flex-col gap-[0.5px] items-start">
-                <span>Download on the</span>
-                <span className="font-semibold">Apple Store</span>
+                <span>{t("hero.appleStoreBtnTextPt1")}</span>
+                <span className="font-semibold">
+                  {t("hero.appleStoreBtnTextPt2")}
+                </span>
               </p>
             </button>
           </div>

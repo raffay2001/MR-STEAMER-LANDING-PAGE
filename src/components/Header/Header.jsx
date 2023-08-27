@@ -383,7 +383,7 @@ export const Header = (props) => {
                   {t("header.signup")}
                 </a>
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 cursor-pointer">
                 <p
                   className={`no-underline text-white px-0 py-1 hover:opacity-[0.8]`}
                   onClick={() => {

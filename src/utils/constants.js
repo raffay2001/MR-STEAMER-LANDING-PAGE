@@ -12,36 +12,42 @@ import service5 from "../assets/images/service5.png";
 
 export const FEATURES = [
   {
+    key: "ecoFriendly",
     title: "Eco Friendly",
     description:
       "We use high-quality cleaning agents and equipment as well as premium materials.",
     icon: feature1,
   },
   {
+    key: "waterConservative",
     title: "Water Conservative",
     description:
       "We use high-quality cleaning agents and equipment as well as premium materials.",
     icon: feature2,
   },
   {
+    key: "timeSaving",
     title: "Time Saving",
     description:
       "We use high-quality cleaning agents and equipment as well as premium materials.",
     icon: feature3,
   },
   {
+    key: "hassleFree",
     title: "Hassle Free",
     description:
       "We use high-quality cleaning agents and equipment as well as premium materials.",
     icon: feature4,
   },
   {
+    key: "userFriendly",
     title: "User Friendly",
     description:
       "We use high-quality cleaning agents and equipment as well as premium materials.",
     icon: feature5,
   },
   {
+    key: "availability",
     title: "24/7 Availability",
     description:
       "We use high-quality cleaning agents and equipment as well as premium materials.",
