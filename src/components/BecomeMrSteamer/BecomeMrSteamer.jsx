@@ -22,9 +22,9 @@ export const BecomeMrSteamer = () => {
               {t("becomeMrSteamer.heading")}
             </h1>
             {/* button tabs  */}
-            <div className="bg-[#F1F1F1] flex gap-2 px-8 py-4 rounded-md w-[370px] md:w-[450px]">
+            <div className="bg-[#F1F1F1] flex gap-2 py-4 rounded-md md:w-[450px] justify-center items-center px-2">
               <button
-                className={`border-none flex flex-col py-2 px-4 cursor-pointer justify-center items-center ${
+                className={`border-none flex flex-col h-12 px-4 cursor-pointer justify-center items-center ${
                   lang === "ar" ? "flex-[0.5]" : ""
                 } ${formMode === "permanent" ? "text-white" : "text-[#666]"}`}
                 style={{
@@ -42,7 +42,7 @@ export const BecomeMrSteamer = () => {
                 </span>
               </button>
               <button
-                className={`border-none flex flex-col py-2 px-4 cursor-pointer justify-center items-center ${
+                className={`border-none flex flex-col h-12 px-4 cursor-pointer justify-center items-center ${
                   lang === "ar" ? "flex-[0.5]" : ""
                 } ${formMode === "partTime" ? "text-white" : "text-[#666]"}`}
                 style={{
@@ -60,7 +60,7 @@ export const BecomeMrSteamer = () => {
                 </span>
               </button>
               <button
-                className={`border-none flex flex-col py-2 px-4 cursor-pointer justify-center items-center ${
+                className={`border-none flex flex-col h-12 px-4 cursor-pointer justify-center items-center ${
                   lang === "ar" ? "flex-[0.5]" : ""
                 } ${
                   formMode === "earnWithYourVehicles"
@@ -77,7 +77,7 @@ export const BecomeMrSteamer = () => {
                 }}
                 onClick={() => setFormMode("earnWithYourVehicles")}
               >
-                <span style={{ fontWeight: 600 }}>
+                <span style={{ fontWeight: 600 }} className="text-[0.72rem] md:text-[0.85rem]">
                   {t("becomeMrSteamer.earnWithYourVehiclesText")}
                 </span>
               </button>

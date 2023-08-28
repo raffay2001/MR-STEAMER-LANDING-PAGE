@@ -19,7 +19,7 @@ const HeroSlide = ({ slideNo, setOpen }) => {
       spacing={2}
       className="px-6 md:px-12 relative md:pt-16 md:h-[50rem]"
     >
-      <div className="hidden md:flex justify-center">
+      <div className="hidden md:flex md:justify-center">
         <svg
           className="w-[700px] h-[700px] absolute top-4 left-0 -z-10"
           viewBox="0 0 570 820"
@@ -173,7 +173,7 @@ const HeroSlide = ({ slideNo, setOpen }) => {
         </div>
       </Grid>
       <Grid item xs={12} md={6}>
-        <div className="flex w-full md:hidden flex-col gap-8 items-center">
+        <div className="flex w-full flex-col gap-8 items-center md:hidden">
           <p className="text-[#2A2D32] text-[40px] leading-[60px] md:text-[68px] md:leading-[90px] text-center">
             {t("hero.headingPartOne")}{" "}
             <span className="font-bold">{t("hero.headingPartTwo")}</span>

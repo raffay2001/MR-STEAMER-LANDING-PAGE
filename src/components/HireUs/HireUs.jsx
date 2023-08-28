@@ -152,12 +152,9 @@ export const HireUs = () => {
                 {t("hireUs.description")}
               </p>
               {/* button tabs  */}
-              <div
-                className="bg-[#F1F1F1] flex gap-2 px-8 py-4 rounded-md justify-center"
-                style={{ width: "340px" }}
-              >
+              <div className="bg-[#F1F1F1] flex gap-2 px-8 py-4 rounded-md justify-center">
                 <button
-                  className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
+                  className={`border-none flex flex-col py-2 px-4 cursor-pointer justify-center items-center ${
                     lang === "ar" ? "flex-[0.5]" : ""
                   } ${
                     formMode === "individual" ? "text-white" : "text-[#666]"
@@ -178,7 +175,7 @@ export const HireUs = () => {
                   </span>
                 </button>
                 <button
-                  className={`border-none flex flex-col py-2 px-4 cursor-pointer ${
+                  className={`border-none flex flex-col py-2 px-4 cursor-pointer justify-center items-center ${
                     lang === "ar" ? "flex-[0.5]" : ""
                   } ${formMode === "company" ? "text-white" : "text-[#666]"}`}
                   style={{
