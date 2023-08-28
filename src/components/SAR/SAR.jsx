@@ -3,7 +3,7 @@ import React from "react";
 export const SAR = ({ title, description, subscribeButtonText }) => {
   return (
     <div
-      className="bg-[#F7F7F7] flex flex-col justify-center items-center pt-6 pb-2 px-4 gap-4 h-[25rem]"
+      className="bg-[#F7F7F7] flex flex-col justify-center items-center pt-6 pb-2 px-4 gap-4 md:h-[25rem]"
       style={{ borderTopLeftRadius: "50px", borderBottomRightRadius: "50px" }}
     >
       <h1 className="text-5xl mb-4" style={{ fontWeight: 600 }}>
