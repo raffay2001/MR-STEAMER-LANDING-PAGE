@@ -88,16 +88,18 @@ export const WhyUs = () => {
                 {t("whyUs.description")}
               </p>
               <div className="mt-8">
-                <button
-                  className="border-none flex flex-col p-2 text-white cursor-pointer rounded-3xl px-12 py-4"
-                  style={{
-                    fontWeight: 600,
-                    background:
-                      "linear-gradient(131deg, #000 0%, #2C4694 100%)",
-                  }}
-                >
-                  {t("whyUs.buttonText")}
-                </button>
+                <a href="#contact">
+                  <button
+                    className="border-none flex flex-col p-2 text-white cursor-pointer rounded-3xl px-12 py-4"
+                    style={{
+                      fontWeight: 600,
+                      background:
+                        "linear-gradient(131deg, #000 0%, #2C4694 100%)",
+                    }}
+                  >
+                    {t("whyUs.buttonText")}
+                  </button>
+                </a>
               </div>
             </div>
           </Grid>

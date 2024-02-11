@@ -32,7 +32,7 @@ const style = {
 
 const topCenterStyle = {
   ...style,
-  top: "55%", // Adjust this value to position the modal vertically
+  top: "55%",
 };
 
 const HomePage = () => {
@@ -85,6 +85,7 @@ const HomePage = () => {
             color: "#fff",
           },
         });
+        clearState();
       } catch (e) {
         setOpen(false);
         toast.error("Something went wrong, please try again.", {

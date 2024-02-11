@@ -43,7 +43,7 @@ const HeroSlide = ({ slideNo, setOpen }) => {
         <div className="hidden w-full md:flex flex-col gap-8 items-start">
           <p className="text-[#2A2D32] text-[40px] leading-[60px] md:text-[68px] md:leading-[90px]">
             {t("hero.headingPartOne")}
-            <span className="font-bold">{t("hero.headingPartTwo")}</span>
+            <span className="ml-4 font-bold">{t("hero.headingPartTwo")}</span>
           </p>
           <div className="flex flex-col gap-2 md:flex-row">
             <button

@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import BecomeMrSteamerImg from "../../assets/images/BecomeMrSteamer.png";
 import { JOB_TYPES, SUADIA_CITIES } from "../../utils/constants";
 import { useContextValue } from "../../context/StateProvider";
+import toast from "react-hot-toast";
+import { doc, setDoc } from "firebase/firestore";
+import { firestore } from "../../firebase.config";
 
 export const BecomeMrSteamer = () => {
   const [formMode, setFormMode] = useState("permanent");
@@ -10,8 +13,33 @@ export const BecomeMrSteamer = () => {
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
   const [city, setCity] = useState("");
-  const [jobType, setJobType] = useState("");
+  const [jobType, setJobType] = useState(JOB_TYPES[0].value);
   const { t, lang } = useContextValue();
+
+  const validateFields = () => {
+    return name && email && mobile && city && city !== "Select";
+  };
+
+  const clearState = () => {
+    setJobType(JOB_TYPES[0].value);
+    setName("");
+    setEmail("");
+    setMobile("");
+    setCity("");
+  };
+
+  const becomeMrSteamerHandler = async () => {
+    if (validateFields()) {
+      const data = { name, email, mobile, city, jobType };
+      await setDoc(doc(firestore, "employees", `${Date.now()}`), data, {
+        merge: true,
+      });
+      toast.success("Your response has submitted, you will be notified.", {});
+      clearState();
+    } else {
+      toast.error("Please fill the mandatory fields", {});
+    }
+  };
 
   return (
     <section id="contact">
@@ -35,7 +63,10 @@ export const BecomeMrSteamer = () => {
                       : "white"
                   }`,
                 }}
-                onClick={() => setFormMode("permanent")}
+                onClick={() => {
+                  setFormMode("permanent");
+                  setJobType(JOB_TYPES[1].value);
+                }}
               >
                 <span style={{ fontWeight: 600 }}>
                   {t("becomeMrSteamer.permanentEmployeeText")}
@@ -53,7 +84,10 @@ export const BecomeMrSteamer = () => {
                       : "white"
                   }`,
                 }}
-                onClick={() => setFormMode("partTime")}
+                onClick={() => {
+                  setFormMode("partTime");
+                  setJobType(JOB_TYPES[0].value);
+                }}
               >
                 <span style={{ fontWeight: 600 }}>
                   {t("becomeMrSteamer.partTimeEmployeeText")}
@@ -75,9 +109,15 @@ export const BecomeMrSteamer = () => {
                       : "white"
                   }`,
                 }}
-                onClick={() => setFormMode("earnWithYourVehicles")}
+                onClick={() => {
+                  setFormMode("earnWithYourVehicles");
+                  setJobType(JOB_TYPES[2].value);
+                }}
               >
-                <span style={{ fontWeight: 600 }} className="text-[0.72rem] md:text-[0.85rem]">
+                <span
+                  style={{ fontWeight: 600 }}
+                  className="text-[0.72rem] md:text-[0.85rem]"
+                >
                   {t("becomeMrSteamer.earnWithYourVehiclesText")}
                 </span>
               </button>
@@ -167,7 +207,7 @@ export const BecomeMrSteamer = () => {
                 style={{
                   background: "linear-gradient(131deg, #000 0%, #2C4694 100%)",
                 }}
-                // onClick={() => alert(JSON.stringify({name, email, mobile, city, jobType}))}
+                onClick={becomeMrSteamerHandler}
               >
                 <p>{t(`becomeMrSteamer.registerButtonText`)}</p>
               </button>
