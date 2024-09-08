@@ -18,6 +18,8 @@ import CloseIcon from "../../assets/images/closeIcon.png";
 import { toast } from "react-hot-toast";
 import { useContextValue } from "../../context/StateProvider";
 
+// sample comment
+
 const style = {
   position: "fixed",
   top: "50%",
