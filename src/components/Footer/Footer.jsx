@@ -12,6 +12,12 @@ import VATLogo from "../../assets/images/VAT_logo.png";
 import EmailLogo from "../../assets/images/Email_Logo.png";
 import WhatsappLogo from "../../assets/images/whatsapp_logo.png";
 import PhoneLogo from "../../assets/images/phone_logo.png";
+import ApplePay from "../../assets/images/apple_pay.png";
+import GooglePay from "../../assets/images/goole_pay.png";
+import TabbyLogo from "../../assets/images/tabby_logo.png";
+import MADALogo from "../../assets/images/mada_logo.png";
+import AMLogo from "../../assets/images/am_logo.png";
+
 
 
 
@@ -150,6 +156,8 @@ export const Footer = ({ setOpen }) => {
       
       <div className="flex flex-col justify-center items-center mt-8">
         {/* Contact information */}
+        <span className="text-[#ffffff80] text-sm">{t("footer.crLicenseText")}: 2055149418</span>
+
         <div className="flex flex-col items-center gap-3 mb-6">
           <span className="text-[#ffffff80] text-sm font-medium mb-1">
             {t("footer.contactUsText") || "Contact Us"}
@@ -173,6 +181,7 @@ export const Footer = ({ setOpen }) => {
               <img src={EmailLogo} alt="email_logo" className="w-5 h-5" />
               <span className="text-sm">info@mistersteamer.com</span>
             </a>
+
           </div>
           
           {/* WhatsApp Channel */}
@@ -192,24 +201,27 @@ export const Footer = ({ setOpen }) => {
           <span className="text-[#ffffff80] text-sm">
             {t("footer.paymentMethodsText") || "Accepted Payment Methods"}
           </span>
-          <img 
-            src={VisaMasterLogo} 
-            alt="visa_mastercard_logo" 
-            className="h-10" 
-          />
+          <div className="flex flex-wrap justify-center gap-4 items-center">
+            <img src={VisaMasterLogo} alt="visa_mastercard_logo" className="h-8" />
+            <img src={MADALogo} alt="mada_logo" className="h-8" />
+            <img src={ApplePay} alt="apple_pay_logo" className="h-8" />
+            <img src={GooglePay} alt="google_pay_logo" className="h-8" />
+            <img src={TabbyLogo} alt="tabby_logo" className="h-8" />
+            <img src={AMLogo} alt="american_express_logo" className="h-10" />
+          </div>
         </div>
         
         {/* VAT and CR information */}
         <div className="flex items-center justify-center gap-4 mt-2">
+        <div className="flex flex-col">
+            <span className="text-[#ffffff80] text-sm">{t("footer.vatNoText")}: 312438910900003</span>
+          </div>
           <img 
             src={VATLogo} 
             alt="vat_logo" 
             className="h-10" 
           />
-          <div className="flex flex-col">
-            <span className="text-[#ffffff80] text-sm">{t("footer.vatNoText")}: 312438910900003</span>
-            <span className="text-[#ffffff80] text-sm">{t("footer.crLicenseText")}: 2055149418</span>
-          </div>
+         
         </div>
       </div>
     </footer>
