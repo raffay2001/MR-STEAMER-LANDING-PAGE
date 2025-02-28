@@ -166,7 +166,12 @@
   },
   "footer": {
     "description": "We value your time and therefore washing your car at our car wash will take no more than 15 minutes. We value your time and therefore washing your car at our car wash will take no more than 15 minutes.",
-    "copyrightText": "Copyright ©2023 Mr. Steamer All rights reserved.",
-    "followUsText": "Follow Us"
+    "copyrightText": "Copyright ©2025 Mr. Steamer All rights reserved.",
+    "followUsText": "Follow Us",
+    "contactUsText": "Contact Us",
+    "paymentMethodsText": "Accepted Payment Methods",
+    "whatsappChannelText": "Follow Mr Steamer on WhatsApp Channel",
+    "vatNoText": "VAT No.",
+    "crLicenseText": "CR / License No."
   }
 }

@@ -7,6 +7,14 @@ import googlePlayLogo from "../../assets/images/google_play_logo.png";
 import InstagramLogo from "../../assets/images/instagram_logo.png";
 import FacebookLogo from "../../assets/images/facebook_logo.png";
 import LinkedInLogo from "../../assets/images/linkedin_logo.png";
+import VisaMasterLogo from "../../assets/images/visa_master_logo.png";
+import VATLogo from "../../assets/images/VAT_logo.png";
+import EmailLogo from "../../assets/images/Email_Logo.png";
+import WhatsappLogo from "../../assets/images/whatsapp_logo.png";
+import PhoneLogo from "../../assets/images/phone_logo.png";
+
+
+
 import { useContextValue } from "../../context/StateProvider";
 
 export const Footer = ({ setOpen }) => {
@@ -132,10 +140,78 @@ export const Footer = ({ setOpen }) => {
               >
                 <img src={LinkedInLogo} alt="linkedin_logo" className="w-7" />
               </a>
+              
             </div>
+
           </div>
+          
         </Grid>
       </Grid>
+      
+      <div className="flex flex-col justify-center items-center mt-8">
+        {/* Contact information */}
+        <div className="flex flex-col items-center gap-3 mb-6">
+          <span className="text-[#ffffff80] text-sm font-medium mb-1">
+            {t("footer.contactUsText") || "Contact Us"}
+          </span>
+          
+          <div className="flex flex-wrap justify-center gap-4">
+            {/* Phone */}
+            <a href="tel:+966582771208" className="flex items-center gap-2 text-white hover:text-gray-300">
+              <img src={PhoneLogo} alt="phone_logo" className="w-5 h-5" />
+              <span className="text-sm">+966 58 277 1208</span>
+            </a>
+            
+            {/* WhatsApp */}
+            <a href="https://wa.me/966582771208" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-white hover:text-gray-300">
+              <img src={WhatsappLogo} alt="whatsapp_logo" className="w-5 h-5" />
+              <span className="text-sm">WhatsApp</span>
+            </a>
+            
+            {/* Email */}
+            <a href="mailto:info@mistersteamer.com" className="flex items-center gap-2 text-white hover:text-gray-300">
+              <img src={EmailLogo} alt="email_logo" className="w-5 h-5" />
+              <span className="text-sm">info@mistersteamer.com</span>
+            </a>
+          </div>
+          
+          {/* WhatsApp Channel */}
+          <a 
+            href="https://whatsapp.com/channel/0029VaqaFBD3WHTe7EWIP33B" 
+            target="_blank" 
+            rel="noreferrer"
+            className="flex items-center gap-2 text-white hover:text-gray-300 mt-1"
+          >
+            <img src={WhatsappLogo} alt="whatsapp_channel_logo" className="w-5 h-5" />
+            <span className="text-sm">{t("footer.whatsappChannelText")}</span>
+          </a>
+        </div>
+
+        {/* Payment methods section */}
+        <div className="flex flex-col items-center gap-2 mb-4">
+          <span className="text-[#ffffff80] text-sm">
+            {t("footer.paymentMethodsText") || "Accepted Payment Methods"}
+          </span>
+          <img 
+            src={VisaMasterLogo} 
+            alt="visa_mastercard_logo" 
+            className="h-10" 
+          />
+        </div>
+        
+        {/* VAT and CR information */}
+        <div className="flex items-center justify-center gap-4 mt-2">
+          <img 
+            src={VATLogo} 
+            alt="vat_logo" 
+            className="h-10" 
+          />
+          <div className="flex flex-col">
+            <span className="text-[#ffffff80] text-sm">{t("footer.vatNoText")}: 312438910900003</span>
+            <span className="text-[#ffffff80] text-sm">{t("footer.crLicenseText")}: 2055149418</span>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };
