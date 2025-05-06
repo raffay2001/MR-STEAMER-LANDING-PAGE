@@ -22,6 +22,7 @@ import AMLogo from "../../assets/images/am_logo.png";
 
 
 import { useContextValue } from "../../context/StateProvider";
+import { Link } from "react-router-dom";
 
 export const Footer = ({ setOpen }) => {
   const { t } = useContextValue();
@@ -118,6 +119,11 @@ export const Footer = ({ setOpen }) => {
                       {t("common.hireUs")}
                     </a>
                   </li>
+                  <li className="hover:opacity-[0.9]">
+                    <Link to="/refund-policy" className="text-white no-underline hover:no-underline">
+                      {t("footer.refundPolicy")}
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -146,14 +152,14 @@ export const Footer = ({ setOpen }) => {
               >
                 <img src={LinkedInLogo} alt="linkedin_logo" className="w-7" />
               </a>
-              
+
             </div>
 
           </div>
-          
+
         </Grid>
       </Grid>
-      
+
       <div className="flex flex-col justify-center items-center mt-8">
         {/* Contact information */}
         <span className="text-[#ffffff80] text-sm">{t("footer.crLicenseText")}: 2055149418</span>
@@ -162,20 +168,20 @@ export const Footer = ({ setOpen }) => {
           <span className="text-[#ffffff80] text-sm font-medium mb-1">
             {t("footer.contactUsText") || "Contact Us"}
           </span>
-          
+
           <div className="flex flex-wrap justify-center gap-4">
             {/* Phone */}
             <a href="tel:+966582771208" className="flex items-center gap-2 text-white hover:text-gray-300">
               <img src={PhoneLogo} alt="phone_logo" className="w-5 h-5" />
               <span className="text-sm">+966 58 277 1208</span>
             </a>
-            
+
             {/* WhatsApp */}
             <a href="https://wa.me/966582771208" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-white hover:text-gray-300">
               <img src={WhatsappLogo} alt="whatsapp_logo" className="w-5 h-5" />
               <span className="text-sm">WhatsApp</span>
             </a>
-            
+
             {/* Email */}
             <a href="mailto:info@mistersteamer.com" className="flex items-center gap-2 text-white hover:text-gray-300">
               <img src={EmailLogo} alt="email_logo" className="w-5 h-5" />
@@ -183,11 +189,11 @@ export const Footer = ({ setOpen }) => {
             </a>
 
           </div>
-          
+
           {/* WhatsApp Channel */}
-          <a 
-            href="https://whatsapp.com/channel/0029VaqaFBD3WHTe7EWIP33B" 
-            target="_blank" 
+          <a
+            href="https://whatsapp.com/channel/0029VaqaFBD3WHTe7EWIP33B"
+            target="_blank"
             rel="noreferrer"
             className="flex items-center gap-2 text-white hover:text-gray-300 mt-1"
           >
@@ -210,18 +216,18 @@ export const Footer = ({ setOpen }) => {
             <img src={AMLogo} alt="american_express_logo" className="h-10" />
           </div>
         </div>
-        
+
         {/* VAT and CR information */}
         <div className="flex items-center justify-center gap-4 mt-2">
-        <div className="flex flex-col">
+          <div className="flex flex-col">
             <span className="text-[#ffffff80] text-sm">{t("footer.vatNoText")}: 312438910900003</span>
           </div>
-          <img 
-            src={VATLogo} 
-            alt="vat_logo" 
-            className="h-10" 
+          <img
+            src={VATLogo}
+            alt="vat_logo"
+            className="h-10"
           />
-         
+
         </div>
       </div>
     </footer>
