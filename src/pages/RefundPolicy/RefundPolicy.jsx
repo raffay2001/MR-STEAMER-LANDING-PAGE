@@ -4,8 +4,6 @@ import React from 'react';
 const effectiveDate = '5/6/2025';
 const reportingTimeframe = '[e.g., 12 hours]';
 const cancellationWindow = '[e.g., 2 hours]';
-const investigationTimeframe = '[e.g., 3-5] business days';
-const processingTimeframe = '[e.g., 7-14] business days';
 const supportEmail = 'info@mistersteamer.com';
 const appName = 'Mister Streamer';
 
