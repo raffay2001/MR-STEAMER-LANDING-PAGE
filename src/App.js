@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { MemoryRouter as Router, Routes, Route } from "react-router";
 import HomePage from "./pages/HomePage/HomePage";
 import RefundPolicy from "./pages/RefundPolicy/RefundPolicy";
 import { Toaster } from "react-hot-toast";
@@ -14,8 +14,9 @@ function App({ lang, setLang }) {
         <div className="flex flex-col justify-center">
           <Toaster />
           <Routes>
-            <Route path="/" element={<HomePage />} />
             <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/"  element={<HomePage />} />
+
           </Routes>
         </div>
       </Router>
