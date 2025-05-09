@@ -22,8 +22,7 @@ import AMLogo from "../../assets/images/am_logo.png";
 
 
 import { useContextValue } from "../../context/StateProvider";
-import { Link } from "react-router-dom";
-
+import { Link } from "react-router";
 export const Footer = ({ setOpen }) => {
   const { t } = useContextValue();
   return (
