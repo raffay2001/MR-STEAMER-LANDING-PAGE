@@ -123,6 +123,11 @@ export const Footer = ({ setOpen }) => {
                       {t("footer.refundPolicy")}
                     </Link>
                   </li>
+                  <li className="hover:opacity-[0.9]">
+                    <Link to="/privacy-policy" className="text-white no-underline hover:no-underline">
+                      {t("footer.privacyPolicy")}
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>

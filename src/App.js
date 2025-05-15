@@ -2,6 +2,7 @@ import React from "react";
 import { MemoryRouter as Router, Routes, Route } from "react-router";
 import HomePage from "./pages/HomePage/HomePage";
 import RefundPolicy from "./pages/RefundPolicy/RefundPolicy";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import { Toaster } from "react-hot-toast";
 import { StateProvider } from "./context/StateProvider";
 import { useTranslation } from "react-i18next";
@@ -15,8 +16,8 @@ function App({ lang, setLang }) {
           <Toaster />
           <Routes>
             <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/"  element={<HomePage />} />
-
           </Routes>
         </div>
       </Router>
