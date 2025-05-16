@@ -104,6 +104,11 @@ export const Footer = ({ setOpen }) => {
                       {t("common.about")}
                     </a>
                   </li>
+                  <li className="hover:opacity-[0.9]">
+                    <Link to="/terms-and-conditions" className="text-white no-underline hover:no-underline">
+                      {t("footer.termsAndConditions")}
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div className="flex flex-col gap-2">
@@ -128,6 +133,7 @@ export const Footer = ({ setOpen }) => {
                       {t("footer.privacyPolicy")}
                     </Link>
                   </li>
+
                 </ul>
               </div>
             </div>
