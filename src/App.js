@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import RefundPolicy from "./pages/RefundPolicy/RefundPolicy";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
+import SupportPage from "./pages/SupportPage/SupportPage";
 import { Toaster } from "react-hot-toast";
 import { StateProvider } from "./context/StateProvider";
 import { useTranslation } from "react-i18next";
@@ -19,6 +20,7 @@ function App({ lang, setLang }) {
             <Route path="/refund-policy" element={<RefundPolicy />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/support" element={<SupportPage />} />
             <Route path="/"  element={<HomePage />} />
           </Routes>
         </div>
