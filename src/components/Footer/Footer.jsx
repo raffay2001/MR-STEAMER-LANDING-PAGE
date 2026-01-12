@@ -129,6 +129,11 @@ export const Footer = ({ setOpen }) => {
                     </Link>
                   </li>
                   <li className="hover:opacity-[0.9]">
+                    <Link to="/support" className="text-white no-underline hover:no-underline">
+                      {t("footer.support") || "Support"}
+                    </Link>
+                  </li>
+                  <li className="hover:opacity-[0.9]">
                     <Link to="/privacy-policy" className="text-white no-underline hover:no-underline">
                       {t("footer.privacyPolicy")}
                     </Link>

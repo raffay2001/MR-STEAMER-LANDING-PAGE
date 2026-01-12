@@ -174,7 +174,8 @@
     "vatNoText": "رقم ضريبة القيمة المضافة",
     "crLicenseText": "رقم السجل التجاري / الترخيص",
     "refundPolicy": "سياسة الاسترداد",
-    "privacyPolicy": "Privacy Policy"
-
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsAndConditions": "الشروط والأحكام",
+    "support": "الدعم"
   }
 }
